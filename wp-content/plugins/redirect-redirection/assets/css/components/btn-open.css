@@ -1,0 +1,17 @@
+.btn-open {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #257671;
+}
+
+@media (hover: hover) {
+  .btn-open:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-open__icon {
+  margin-left: 10px;
+}

@@ -1,0 +1,123 @@
+.redirect-table-wrap {
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+
+.redirect-table {
+  width: 100%;
+  white-space: nowrap;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: #000;
+  text-align: left;
+  margin-bottom: 40px;
+  min-height: 140px;
+}
+
+.redirect-table thead tr {
+  background: #fff;
+  border-top: 0;
+}
+
+.redirect-table th {
+  padding: 18px 0 19px;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.redirect-table tr {
+  box-sizing: border-box;
+  border-top: 2px solid #e1dada;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: #f8f8f8;
+  width: 100%;
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 340px 300px 151px 85px 85px 1fr;
+
+  align-items: center;
+}
+
+@media (hover: hover) {
+  .redirect-table tbody tr:hover td {
+    /*color: #d0302d;*/
+  }
+}
+
+.redirect-table tbody td {
+  padding: 10px 0 12px;
+}
+
+.redirect-table td {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.redirect-table td:not(:last-child) {
+  margin-right: 45px;
+}
+
+.redirect-table td:last-child {
+  text-align: center;
+}
+
+.redirect-table__cell-select {
+  display: grid;
+  width: 100%;
+  align-items: center;
+  grid-template-columns: min-content 98px;
+  justify-content: space-between;
+}
+
+input.redirect-table__url-item {
+  box-sizing: border-box;
+  width: 100%;
+  display: inline-block;
+  background: #fff;
+  padding: 14px 17px 13px;
+  border: 1px solid #c6c9cf;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.redirect-table__text-gray {
+  color: #8e8e8e;
+}
+
+.redirect-btn,
+.redirect-btn:hover {
+  padding: 12px 24px;
+  background: #257671;
+  border-radius: 8px;
+  display: inline-grid;
+  grid-template-columns: auto min-content;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.redirect-table-wrap__btn-open {
+  display: flex;
+  margin: 0 auto 40px;
+  width: max-content;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.redirect-table-wrap__pagination {
+  margin: 0 auto;
+  text-align: center;
+}
+.fw-400{
+  font-weight: 400;
+}

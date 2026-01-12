@@ -1,0 +1,102 @@
+{
+	"translation-revision-date": "2025-01-11 11:40+0100",
+	"generator": "WP-CLI/2.6.0",
+	"source": "dist/app.js",
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": {
+				"domain": "messages",
+				"lang": "ar\\n",
+				"plural-forms": "nplurals=2; plural=(n != 1);"
+			},
+			"AI + Block Editor": [
+				"الذكاء الاصطناعي + محرر الكتل"
+			],
+			"Headline": [
+				"العنوان"
+			],
+			"Slug": [
+				"سبيكة"
+			],
+			"SEO Keywords": [
+				"كلمات مفتاحية لتحسين محركات البحث"
+			],
+			"Summary": [
+				"ملخص"
+			],
+			"Use Casual Tone": [
+				"استخدم النغمة غير الرسمية"
+			],
+			"Use Official Tone": [
+				"استخدم النغمة الرسمية"
+			],
+			"Use Descriptive Tone": [
+				"استخدم نبرة وصفية"
+			],
+			"Use Narrative Tone": [
+				"استخدم نبرة السرد"
+			],
+			"Use Aggressive Tone": [
+				"استخدم نبرة عدوانية"
+			],
+			"Generate": [
+				"يولد"
+			],
+			"AI is generating text, please hold on for a bit.": [
+				"الذكاء الاصطناعي يقوم بإنشاء نص، يرجى الانتظار قليلاً."
+			],
+			"Switch AI Provider": [
+				"تبديل مزود الذكاء الاصطناعي"
+			],
+			"Social Media Hashtags": [
+				"هاشتاجات وسائل التواصل الاجتماعي"
+			],
+			"Success! AI Provider switched successfully to OpenAI": [
+				"نجاح! تم تحويل مزود الذكاء الاصطناعي بنجاح إلى OpenAI."
+			],
+			"Success! AI Provider switched successfully to Gemini": [
+				"تم التحويل بنجاح إلى Gemini."
+			],
+			"Success! AI Provider switched successfully to DeepSeek": [
+				"تم التحويل بنجاح إلى DeepSeek."
+			],
+			"Success! AI Provider switched successfully to ChatGPT": [
+				"تم التحويل بنجاح إلى ChatGPT."
+			],
+			"OpenAI": [
+				"OpenAI"
+			],
+			"Gemini": [
+				"Gemini"
+			],
+			"DeepSeek": [
+				"DeepSeek"
+			],
+			"ChatGPT": [
+				"ChatGPT"
+			],
+			"Success! AI Provider switched successfully.": [
+				"تم التحويل بنجاح! تم تحويل مزود الذكاء الاصطناعي."
+			],
+			"Error! Failed to switch AI Provider.": [
+				"خطأ! فشل في تبديل مزود الذكاء الاصطناعي."
+			],
+			"Error! Failed to fetch Headline. Please check your error logs or console for more info.": [
+				"خطأ! فشل في جلب العنوان. الرجاء التحقق من سجلات الأخطاء أو وحدة التحكم لمزيد من المعلومات."
+			],
+			"Error! Failed to fetch Slug. Please check your error logs or console for more info.": [
+				"خطأ! فشل في جلب السبيكة. الرجاء التحقق من سجلات الأخطاء أو وحدة التحكم لمزيد من المعلومات."
+			],
+			"Error! Failed to fetch SEO Keywords. Please check your error logs or console for more info.": [
+				"خطأ! فشل في جلب كلمات مفتاحية لتحسين محركات البحث. الرجاء التحقق من سجلات الأخطاء أو وحدة التحكم لمزيد من المعلومات."
+			],
+			"Error! Failed to fetch Summary. Please check your error logs or console for more info.": [
+				"خطأ! فشل في جلب الملخص. الرجاء التحقق من سجلات الأخطاء أو وحدة التحكم لمزيد من المعلومات."
+			],
+			"Error! Failed to fetch Hashtags. Please check your error logs or console for more info.": [
+				"خطأ! فشل في جلب الهاشتاجات. الرجاء التحقق من سجلات الأخطاء أو وحدة التحكم لمزيد من المعلومات."
+			]
+		}
+	}
+}

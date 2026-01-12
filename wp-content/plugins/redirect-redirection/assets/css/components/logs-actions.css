@@ -1,0 +1,79 @@
+.redirect-content__logs-actions {
+  margin: 0 0 7px;
+}
+
+.logs-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+  gap: 12px;
+}
+
+@media (min-width: 425px) {
+  .logs-actions {
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1380px) {
+  .logs-actions {
+    grid-template-columns: 0fr minmax(195px, 100%) minmax(0%, 100%);
+  }
+}
+
+
+
+.logs-actions__delete-set-wrap {
+  max-width: 523px;
+  grid-column: 1/-1;
+}
+
+@media (min-width: 1380px) {
+  .logs-actions__delete-set-wrap {
+    grid-column: initial;
+  }
+}
+
+.delete-set-wrap .custom-select-wrapper {
+  width: 230px;
+}
+
+.logs-actions__btn {
+  text-decoration: none;
+  outline: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background: transparent;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+  display: grid;
+  grid-template-columns: min-content auto;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@media (min-width: 1380px) {
+  .logs-actions__btn {
+    justify-self: end;
+  }
+}
+
+.logs-actions__btn--download,
+.logs-actions__btn--download:hover {
+  color: #257671;
+}
+
+.logs-actions__btn--delete,
+.logs-actions__btn--delete:hover {
+  color: #d0302d;
+  gap: 8px;
+}

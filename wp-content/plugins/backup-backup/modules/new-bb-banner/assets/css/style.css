@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&family=Roboto&display=swap');
+.bmi-banner {
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  background: linear-gradient(180deg, #FFFFFF -10.65%, #C3EAF2 103.46%);
+  position: relative;
+  max-width: 1000px;
+  margin: 30px auto;
+  border-radius: 10px;
+  padding: 30px 60px;
+  color: #000;
+}
+
+.bmi-banner__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 40px;
+  color: #999;
+  text-decoration: none;
+}
+.bmi-banner__close:hover {
+  color: #929498;
+}
+
+.bmi-banner__header {
+  margin-bottom: 10px;
+}
+
+.bmi-banner__header div {
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 27px;
+  color: #000;
+  text-align: center;
+}
+
+.bmi-banner__header div .bb-highlight {
+  color: #0C7872;
+  font-weight: 700;
+}
+
+.bmi-banner__header .small {
+  font-size: 0.9rem;
+}
+
+.bmi-banner__cards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  gap: 25px;
+}
+
+.bmi-banner__card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 20px 25px 20px 20px;
+  gap: 10px;
+  border-radius: 20px;
+}
+
+.bmi-banner__card-header{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.bmi-banner__card img {
+  display: block;
+  height: 70px;
+  width: 70px;
+}
+
+.bmi-banner__card h3 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.bmi-banner__card .bmi-banner__card-text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 22.5px;
+}
+
+
+.bmi-banner__footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+  gap: 25px;
+}
+
+.bmi-banner__footer-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+}
+
+.bmi-banner__footer span {
+  margin: 0;
+  font-size: 15px;
+  line-height: 22.5px;
+}
+
+.bmi-banner__cta-button {
+  background: #148E87;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 50px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.bmi-banner__cta-button:hover {
+  background: #10736E;
+}
+
+.bmi-banner .bmi-links {
+  color: #148E87;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.bmi-banner__dismiss-link{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  color: #929498;
+  text-decoration: none;
+}
+
+.bmi-banner__dismiss-link:hover {
+  color: #999;
+}
+
+
+
+
+/* 
+  Underline effect for the free link
+ */
+.bmi-banner__free-underlined {
+  display: inline-block;
+  position: relative;
+}
+.bmi-banner__free-underlined::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: 0;
+  bottom: 4px;
+  height: 7px; 
+  background-color: #55BDBD; 
+  border-radius: 5px; 
+  z-index: 0; 
+  width: 110%;
+}
+.bmi-banner__free-underlined span {
+  position: relative;
+  z-index: 1;
+}
+
+.bmi-banner__left-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  border-radius: 10px 0 0 10px;
+}
+
+
+.bmi-banner__card.bmi-banner__premium-card {
+  display: flex;
+  flex-direction: row;
+}
+
+.bmi-banner__premium-card .bmi-banner__card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bmi-banner__cards {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .bmi-banner__card {
+    margin: 0 auto;
+    max-width: 300px;
+  }
+  .bmi-banner__footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

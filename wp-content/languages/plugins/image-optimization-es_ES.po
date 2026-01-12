@@ -1,0 +1,678 @@
+# Translation of Plugins - Image Optimizer &#8211; Optimize Images and Convert to WebP or AVIF - Stable (latest release) in Spanish (Spain)
+# This file is distributed under the same license as the Plugins - Image Optimizer &#8211; Optimize Images and Convert to WebP or AVIF - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-05-30 12:12:38+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: es\n"
+"Project-Id-Version: Plugins - Image Optimizer &#8211; Optimize Images and Convert to WebP or AVIF - Stable (latest release)\n"
+
+#: modules/optimization/templates/details-view/optimized.php:40
+#: modules/optimization/templates/list-view/optimized.php:27
+#: modules/optimization/templates/meta-box/optimized.php:36
+#: assets/build/control.js:11
+#: modules/optimization/assets/js/templates/details-view/index.js:119
+#: modules/optimization/assets/js/templates/list-view/index.js:73
+#: modules/optimization/assets/js/templates/meta-box/index.js:95
+msgid "Open optimization details"
+msgstr "Abrir detalles de optimización"
+
+#: modules/core/components/not-connected-modal.php:35
+msgid "Convert to AVIF and WebP formats"
+msgstr "Convierte a formatos AVIF y WebP"
+
+#: modules/core/components/not-connected-modal.php:34
+msgid "Bulk optimization for faster processing"
+msgstr "Optimización en lotes para un procesamiento más rápido"
+
+#: modules/core/components/not-connected-modal.php:33
+msgid "Boost site speed and compress images"
+msgstr "Aumenta la velocidad del sitio y comprime imágenes."
+
+#: modules/core/components/not-connected-modal.php:31
+msgid "Connect the Image Optimizer plugin to speed up your site. We'll handle the rest."
+msgstr "Conecta el plugin Image Optimizer para acelerar tu sitio. Nosotros nos ocuparemos del resto."
+
+#: modules/core/components/not-connected-modal.php:30
+msgid "Let's start optimizing your images!"
+msgstr "¡Empieza a optimizar tus imágenes!"
+
+#: modules/core/components/not-connected-modal.php:36
+msgid "Works across unlimited websites"
+msgstr "Funciona en sitios webs ilimitados"
+
+#: modules/core/components/renewal-notice.php:50
+msgid "Renew and Optimize"
+msgstr "Renovar y optimizar"
+
+#: modules/core/components/renewal-notice.php:49
+msgid "Reactivate your license to get back to top image performance."
+msgstr "Reactiva tu licencia para volver a tener un rendimiento de imágenes superior."
+
+#: modules/core/components/renewal-notice.php:48
+msgid "It’s Not Too Late! Renew Image Optimizer"
+msgstr "¡No es demasiado tarde! Renueva Image Optimizer"
+
+#: modules/core/components/renewal-notice.php:43
+msgid "Renew Now"
+msgstr "Renovar ahora"
+
+#: modules/core/components/renewal-notice.php:42
+msgid "Renew your license today to continue enjoying premium image optimization and fast load times."
+msgstr "Renueva hoy tu licencia para seguir disfrutando de optimización de imágenes premium y tiempos de carga rápidos."
+
+#: modules/core/components/renewal-notice.php:41
+msgid "Image Optimizer Has Expired!"
+msgstr "¡Ha caducado Image Optimizer!"
+
+#: modules/core/components/renewal-notice.php:35
+msgid "Turn Auto Renew On"
+msgstr "Activar la renovación automática"
+
+#: modules/core/components/renewal-notice.php:34
+msgid "Renew your subscription to maintain optimized images, faster website load times, and high performance."
+msgstr "Renueva tu suscripción para mantener las imágenes optimizadas, tiempos de carga de tu web más rápidos, y un alto rendimiento."
+
+#: modules/core/components/renewal-notice.php:33
+msgid "Image Optimizer Expires Soon!"
+msgstr "¡Image Optimizer caduca pronto!"
+
+#. Description of the plugin
+#: image-optimization.php
+msgid "Automatically resize, optimize, and convert images to WebP and AVIF. Compress images in bulk or on upload to boost your WordPress site performance."
+msgstr "Redimensiona, optimiza y convierte automáticamente imágenes a WebP y AVIF. Comprime imágenes en bloque o al subirlas para aumentar el rendimiento de tu sitio WordPress."
+
+#. Plugin Name of the plugin
+#: image-optimization.php
+msgid "Image Optimizer - Compress, Resize and Optimize Images"
+msgstr "Image Optimizer – Compress, Resize and Optimize Images"
+
+#: modules/optimization/classes/validate-image.php:80
+msgid "Unsupported file format. Only %1$s, or %2$s are supported"
+msgstr "Formato de archivo no compatible. Sólo se admiten %1$s, o %2$s"
+
+#: modules/core/module.php:169 assets/build/admin.js:11
+#: assets/build/admin.js:37
+msgid "Fix mismatched URL"
+msgstr "Corregir URL no coincidentes"
+
+#: modules/core/module.php:163
+msgid "This is most likely due to a change in the domain URL of your site (including HTTP/SSL migration)."
+msgstr "Lo más probable es que se deba a un cambio en la URL del dominio de tu sitio (incluida la migración HTTP/SSL)."
+
+#: modules/connect/rest/switch-domain.php:59
+msgid "Domain updated!"
+msgstr "¡Dominio actualizado!"
+
+#: modules/connect/rest/switch-domain.php:51
+msgid "Client ID not found"
+msgstr "No se ha encontrado el ID de cliente"
+
+#: modules/connect/rest/authorize.php:67
+msgid "Connected domain mismatch"
+msgstr "Inconsistencia de dominio conectado"
+
+#: modules/core/module.php:156
+msgid "Your license key does not match your current domain, causing a mismatch."
+msgstr "Tu clave de licencia no coincide con tu dominio actual, lo que provoca una inconsistencia."
+
+#. Author URI of the plugin
+#: image-optimization.php
+msgid "https://go.elementor.com/author-uri-io/"
+msgstr "https://go.elementor.com/author-uri-io/"
+
+#: modules/optimization/templates/details-view/optimized.php:53
+#: modules/optimization/templates/list-view/optimized.php:38
+#: modules/optimization/templates/meta-box/optimized.php:47
+msgid "Requested WebP format is larger than the original file. Switch to Lossy in settings to convert this image in an optimized manner."
+msgstr "El formato WebP solicitado es mayor que el archivo original. Cambia a «Pérdida» en los ajustes para convertir esta imagen de forma optimizada."
+
+#: modules/core/components/not-connected-modal.php:29
+#: modules/core/components/not-connected.php:41
+msgid "Connect now"
+msgstr "Conectar ahora"
+
+#: modules/core/components/not-connected.php:33
+msgid "Image Optimizer is not connected right now. To start optimizing your images, please connect your account."
+msgstr "Image Optimizer no está conectado en este momento. Para empezar a optimizar tus imágenes, conecta tu cuenta."
+
+#: modules/connect/classes/service.php:191
+msgid "Missing JWKS URL"
+msgstr "Falta la URL de JWKS"
+
+#: image-optimization.php:76
+msgid "Show me how"
+msgstr "Muéstrame cómo"
+
+#. translators: %s: PHP version.
+#: image-optimization.php:73
+msgid "Update to PHP version %s and get back to optimizing!"
+msgstr "¡Actualiza a la versión %s de PHP y vuelve a optimizar!"
+
+#: classes/rest/route.php:286
+msgid "No route was found matching the URL and request method"
+msgstr "No se ha encontrado la ruta que coincida con la URL y el método de la solicitud"
+
+#: modules/core/components/user-feedback.php:96
+msgid "Your image has been optimized!"
+msgstr "¡Tu imagen ha sido optimizada!"
+
+#: modules/optimization/components/bulk-optimization.php:155
+msgid "Heads up!"
+msgstr "¡Aviso!"
+
+#: modules/core/components/user-feedback.php:168
+msgid "Thanks for using Image Optimizer!"
+msgstr "¡Gracias por utilizar Image Optimizer!"
+
+#: modules/optimization/components/bulk-optimization.php:162
+msgid "Bulk optimizing may take a lot of processing and server time, depending on the number of images. Your site will still work smoothly until the processing is all done, without any downtime."
+msgstr "La optimización por lotes puede llevar mucho tiempo de procesamiento y del servidor, dependiendo del número de imágenes. Tu sitio seguirá funcionando sin problemas hasta que termine todo el procesamiento, sin ningún tiempo de inactividad."
+
+#: modules/core/components/user-feedback.php:236
+msgid ""
+"<b>Found Image Optimizer helpful?</b> Leave us a <a href=\"%1$s\" aria-label=\"%2$s\" target=\"_blank\"\n"
+"\t\t\t\trel=\"noopener noreferrer\">★★★★★</a> rating!"
+msgstr "<b>¿Te ha resultado útil el Image Optimizer?</b> Déjanos una valoración <a href=\"%1$s\" aria-label=\"%2$s\" target=\"_blank\"     rel=\"noopener noreferrer\">★★★★★</a>!"
+
+#: modules/core/components/user-feedback.php:176
+msgid ""
+"If you've enjoyed it, consider leaving a <a href=\"%1$s\" aria-label=\"%2$s\" target=\"_blank\"\n"
+"\t\t\t\trel=\"noopener noreferrer\">★★★★★</a> review to spread the word."
+msgstr ""
+"Si te ha gustado, considera la posibilidad de dejar una reseña <a href=\"%1$s\" aria-label=\"%2$s\" target=\"_blank\"\n"
+"\t\t\t\trel=\"noopener noreferrer\">★★★★★</a> para correr la voz."
+
+#: modules/core/components/user-feedback.php:104
+msgid ""
+"If you enjoyed using Image Optimizer, consider leaving a <a href=\"%1$s\" aria-label=\"%2$s\" target=\"_blank\"\n"
+"\t\t\t\trel=\"noopener noreferrer\">★★★★★</a> review to spread the word."
+msgstr ""
+"Si te ha gustado utilizar el Image Optimizer, considera dejar una reseña <a href=\"%1$s\" aria-label=\"%2$s\" target=\"_blank\"\n"
+"\t\t\t\trel=\"noopener noreferrer\">★★★★★</a> para que corra la voz."
+
+#: modules/core/components/user-feedback.php:110
+#: modules/core/components/user-feedback.php:182
+#: modules/core/components/user-feedback.php:241
+msgid "Five stars"
+msgstr "Cinco estrellas"
+
+#: image-optimization.php:110
+msgid "Your site doesn’t have the necessary read/write permissions for your file system to use this plugin. Please contact your hosting provider to resolve this matter."
+msgstr "Tu sitio no tiene los permisos de lectura/escritura necesarios para que tu sistema de archivos pueda utilizar este plugin. Ponte en contacto con tu proveedor de alojamiento para resolver este problema."
+
+#: image-optimization.php:86
+msgid "The following required PHP extensions are missing: %s"
+msgstr "Faltan las siguientes extensiones PHP obligatorias: %s"
+
+#: image-optimization.php:174
+msgid "Image Optimizer isn’t running because:"
+msgstr "Image Optimizer no se está ejecutando porque:"
+
+#. translators: 1: MySQL minimum version. 2: MariaDB minimum version.
+#: image-optimization.php:96
+msgid "The database server version is outdated. Update to MySQL version %1$s or MariaDB version %2$s."
+msgstr "La versión del servidor de base de datos está obsoleta. Actualiza a la versión %1$s de MySQL o a la versión %2$s de MariaDB."
+
+#: modules/optimization/rest/get-bulk-optimization-images.php:34
+msgid "Missed operation id"
+msgstr "Falta la ID de la operación"
+
+#: modules/optimization/classes/optimize-image.php:212
+#: modules/optimization/classes/optimize-image.php:223
+msgid "Service response is incorrect"
+msgstr "La respuesta del servicio es incorrecta"
+
+#: modules/optimization/classes/optimization-error-message.php:28
+msgid "File with this name already exists"
+msgstr "Ya existe un archivo con este nombre"
+
+#: modules/core/module.php:88 modules/core/module.php:133
+msgid "Upgrade plan now"
+msgstr "Mejora el plan ahora"
+
+#: modules/core/module.php:82
+msgid "You have no images left to optimize in your current plan."
+msgstr "No te quedan imágenes por optimizar en tu plan actual."
+
+#: modules/core/module.php:75
+msgid "You’ve reached your plan quota."
+msgstr "Has alcanzado el límite de tu plan."
+
+#: classes/client/client-response.php:43
+msgid "Image already optimized"
+msgstr "La imagen ya está optimizada"
+
+#: classes/client/client-response.php:42
+msgid "Bulk token expired"
+msgstr "Token por lotes caducado"
+
+#. Plugin URI of the plugin
+#: image-optimization.php
+msgid "https://go.elementor.com/wp-repo-description-tab-io-product-page/"
+msgstr "https://go.elementor.com/wp-repo-description-tab-io-product-page/"
+
+#: modules/optimization/templates/details-view/optimized.php:55
+#: modules/optimization/templates/list-view/optimized.php:40
+#: modules/optimization/templates/meta-box/optimized.php:49
+#: assets/build/control.js:11
+#: modules/optimization/assets/js/templates/details-view/index.js:137
+#: modules/optimization/assets/js/templates/list-view/index.js:82
+#: modules/optimization/assets/js/templates/meta-box/index.js:109
+msgid "Image is fully optimized"
+msgstr "La imagen está totalmente optimizada"
+
+#: modules/optimization/classes/single-optimization.php:45
+msgid "Optimization is already in progress"
+msgstr "La optimización ya está en curso"
+
+#: classes/client/client-response.php:41
+#: modules/optimization/classes/optimization-error-message.php:29
+msgid "Plan quota reached"
+msgstr "Se ha alcanzado el límite del plan"
+
+#. Author of the plugin
+#: image-optimization.php
+msgid "Elementor.com"
+msgstr "Elementor.com"
+
+#. translators: %s: file size in gigabytes
+#: classes/file-utils.php:93 assets/build/admin.js:9 assets/build/control.js:9
+#: modules/optimization/assets/js/utils/index.js:12
+msgid "%s Gb"
+msgstr "%s Gb"
+
+#. translators: %s: file size in megabytes
+#: classes/file-utils.php:92 assets/build/admin.js:7 assets/build/control.js:7
+#: modules/optimization/assets/js/utils/index.js:10
+msgid "%s Mb"
+msgstr "%s Mb"
+
+#. translators: %s: file size in kilobytes
+#: classes/file-utils.php:91 assets/build/admin.js:5 assets/build/control.js:5
+#: modules/optimization/assets/js/utils/index.js:8
+msgid "%s Kb"
+msgstr "%s Kb"
+
+#. translators: %s: file size in bytes
+#: classes/file-utils.php:90 assets/build/admin.js:3 assets/build/admin.js:11
+#: assets/build/control.js:3 assets/build/control.js:11
+#: modules/optimization/assets/js/utils/index.js:6
+#: modules/optimization/assets/js/utils/index.js:17
+msgid "%s Bytes"
+msgstr "%s Bytes"
+
+#: classes/rest/route.php:381 classes/route.php:353
+msgid "Invalid nonce"
+msgstr "Nonce no válido"
+
+#: classes/rest/route.php:374 classes/route.php:346
+#: modules/optimization/components/media-control.php:288
+msgid "Internal server error"
+msgstr "Error interno del servidor"
+
+#: modules/core/module.php:199
+#: modules/optimization/templates/details-view/error.php:42
+#: modules/optimization/templates/list-view/error.php:35
+#: modules/optimization/templates/meta-box/error.php:35
+#: assets/build/control.js:11 assets/build/control.js:19
+#: modules/optimization/assets/js/templates/details-view/index.js:83
+#: modules/optimization/assets/js/templates/list-view/index.js:51
+#: modules/optimization/assets/js/templates/meta-box/index.js:64
+#: modules/optimization/assets/js/templates/optimization-details/index.js:131
+msgid "Upgrade"
+msgstr "Mejorar"
+
+#: modules/core/module.php:189 assets/build/admin.js:29
+msgid "Settings"
+msgstr "Ajustes"
+
+#: modules/core/components/conflicts.php:58
+msgid "Deactivate All"
+msgstr "Desactivar todo"
+
+#: modules/oauth/components/connect-pointer.php:22
+msgid "Start by connecting your license"
+msgstr "Empieza por conectar tu licencia"
+
+#: modules/oauth/rest/activate.php:52 modules/oauth/rest/deactivate.php:45
+msgid "Missing license key"
+msgstr "Falta la clave de licencia"
+
+#: modules/optimization/classes/optimization-error-message.php:16
+msgid "Image reoptimizing failed"
+msgstr "Error en la reoptimización de imágenes"
+
+#: modules/optimization/classes/optimization-status.php:43
+msgid "Image restoring failed"
+msgstr "Error al restaurar las imágenes"
+
+#: modules/optimization/classes/bulk-optimization-controller.php:257
+msgid "Images quota exceeded"
+msgstr "Límite de imágenes superado"
+
+#: modules/oauth/components/connect.php:155
+#: modules/oauth/components/connect.php:231
+#: modules/oauth/components/connect.php:273
+#: modules/oauth/components/connect.php:301
+msgid "Invalid response from server"
+msgstr "Respuesta no válida del servidor"
+
+#: classes/module-base.php:122 classes/module-base.php:133
+msgid "Something went wrong."
+msgstr "Algo ha ido mal."
+
+#: modules/backups/rest/restore-single.php:40
+#: modules/optimization/rest/optimize-single-image.php:52
+msgid "Invalid image id"
+msgstr "ID de imagen no válida"
+
+#: classes/rest/route.php:390 classes/rest/route.php:405 classes/route.php:364
+msgid "You do not have sufficient permissions to access this data."
+msgstr "No tienes permisos suficientes para acceder a estos datos."
+
+#: modules/settings/components/settings-pointer.php:34
+msgid "Take me there"
+msgstr "Llévame allí"
+
+#: modules/optimization/templates/list-view/loading.php:31
+#: assets/build/control.js:11
+#: modules/optimization/assets/js/templates/list-view/index.js:32
+msgid "Loading…"
+msgstr "Cargando…"
+
+#: modules/optimization/templates/list-view/loading.php:19
+#: assets/build/admin.js:29 assets/build/control.js:11
+#: modules/optimization/assets/js/templates/list-view/index.js:20
+msgid "Restoring…"
+msgstr "Restaurando…"
+
+#: modules/optimization/templates/details-view/not-optimized.php:27
+#: modules/optimization/templates/list-view/not-optimized.php:13
+#: modules/optimization/templates/meta-box/not-optimized.php:22
+#: assets/build/control.js:11
+#: modules/optimization/assets/js/templates/details-view/index.js:24
+#: modules/optimization/assets/js/templates/list-view/index.js:10
+#: modules/optimization/assets/js/templates/meta-box/index.js:19
+msgid "Optimize now"
+msgstr "Optimizar ahora"
+
+#: modules/optimization/templates/details-view/not-optimized.php:17
+#: modules/optimization/templates/meta-box/not-optimized.php:15
+#: assets/build/control.js:11 assets/build/control.js:17
+#: modules/optimization/assets/js/templates/details-view/index.js:14
+#: modules/optimization/assets/js/templates/meta-box/index.js:12
+#: modules/optimization/assets/js/templates/optimization-details/index.js:87
+msgid "Not optimized"
+msgstr "Sin optimizar"
+
+#: modules/optimization/templates/details-view/loading.php:18
+#: modules/optimization/templates/meta-box/loading.php:16
+#: assets/build/control.js:11
+#: modules/optimization/assets/js/templates/details-view/index.js:39
+#: modules/optimization/assets/js/templates/meta-box/index.js:31
+msgid "In Progress"
+msgstr "En curso"
+
+#: modules/optimization/templates/details-view/error.php:47
+#: modules/optimization/templates/list-view/error.php:40
+#: modules/optimization/templates/meta-box/error.php:40 assets/build/admin.js:1
+#: assets/build/admin.js:11 assets/build/admin.js:29 assets/build/control.js:11
+#: modules/optimization/assets/js/templates/details-view/index.js:88
+#: modules/optimization/assets/js/templates/list-view/index.js:56
+#: modules/optimization/assets/js/templates/meta-box/index.js:69
+msgid "Try again"
+msgstr "Probar de nuevo"
+
+#: modules/optimization/templates/details-view/error.php:25
+#: modules/optimization/templates/meta-box/error.php:22
+#: assets/build/control.js:11
+#: modules/optimization/assets/js/templates/details-view/index.js:67
+#: modules/optimization/assets/js/templates/meta-box/index.js:52
+msgid "Reason"
+msgstr "Razón"
+
+#: modules/optimization/templates/details-view/error.php:19
+#: modules/optimization/templates/meta-box/error.php:17
+#: assets/build/control.js:11
+#: modules/optimization/assets/js/templates/details-view/index.js:61
+#: modules/optimization/assets/js/templates/meta-box/index.js:47
+msgid "Error"
+msgstr "Error"
+
+#: modules/optimization/templates/details-view/error.php:15
+#: modules/optimization/templates/details-view/loading.php:14
+#: modules/optimization/templates/details-view/not-optimized.php:13
+#: modules/optimization/templates/details-view/optimized.php:18
+#: modules/optimization/templates/meta-box/error.php:14
+#: modules/optimization/templates/meta-box/loading.php:13
+#: modules/optimization/templates/meta-box/not-optimized.php:12
+#: modules/optimization/templates/meta-box/optimized.php:17
+#: assets/build/admin.js:31 assets/build/control.js:11
+#: modules/optimization/assets/js/templates/details-view/index.js:10
+#: modules/optimization/assets/js/templates/details-view/index.js:35
+#: modules/optimization/assets/js/templates/details-view/index.js:57
+#: modules/optimization/assets/js/templates/details-view/index.js:101
+#: modules/optimization/assets/js/templates/meta-box/index.js:9
+#: modules/optimization/assets/js/templates/meta-box/index.js:28
+#: modules/optimization/assets/js/templates/meta-box/index.js:44
+#: modules/optimization/assets/js/templates/meta-box/index.js:80
+msgid "Status"
+msgstr "Estado"
+
+#: modules/optimization/rest/cancel-bulk-optimization.php:39
+#: modules/optimization/rest/optimize-bulk.php:42
+#: modules/optimization/rest/optimize-single-image.php:42
+msgid "Invalid activation"
+msgstr "Activación no válida"
+
+#: modules/optimization/components/media-control.php:280
+#: assets/build/admin.js:13 assets/build/admin.js:15 assets/build/admin.js:21
+#: assets/build/admin.js:23 assets/build/admin.js:25 assets/build/admin.js:27
+msgid "N/A"
+msgstr "N/D"
+
+#: modules/optimization/components/media-control.php:257
+msgid "Image restoring error"
+msgstr "Error al restaurar las imágenes"
+
+#: modules/optimization/classes/optimization-error-message.php:30
+msgid "Optimization error"
+msgstr "Error de optimización"
+
+#: modules/optimization/components/media-control.php:57
+#: modules/optimization/components/media-control.php:85
+msgid "Image optimization"
+msgstr "Optimización de imágenes"
+
+#: modules/core/module.php:380
+#: modules/optimization/components/bulk-optimization.php:49
+#: modules/optimization/components/bulk-optimization.php:50
+msgid "Bulk Optimization"
+msgstr "Optimización por lotes"
+
+#: modules/optimization/components/admin-filter.php:28
+msgid "Filter by optimization status"
+msgstr "Filtrar por estado de optimización"
+
+#: modules/optimization/components/admin-filter.php:22
+msgid "Errors"
+msgstr "Errores"
+
+#: modules/optimization/components/admin-filter.php:21 assets/build/admin.js:1
+msgid "In progress"
+msgstr "En curso"
+
+#: modules/optimization/components/admin-filter.php:20
+msgid "Unoptimized"
+msgstr "Sin optimizar"
+
+#: modules/optimization/components/admin-filter.php:19
+#: modules/optimization/templates/details-view/optimized.php:22
+#: modules/optimization/templates/meta-box/optimized.php:20
+#: assets/build/admin.js:1 assets/build/control.js:11
+#: modules/optimization/assets/js/templates/details-view/index.js:105
+#: modules/optimization/assets/js/templates/meta-box/index.js:83
+msgid "Optimized"
+msgstr "Optimizado"
+
+#: modules/optimization/components/admin-filter.php:18
+msgid "All Media Files"
+msgstr "Todos los archivos de medios"
+
+#: modules/optimization/components/admin-bulk-actions.php:19
+#: modules/optimization/templates/details-view/optimized.php:94
+#: modules/optimization/templates/list-view/optimized.php:63
+#: modules/optimization/templates/meta-box/optimized.php:72
+#: assets/build/control.js:11
+#: modules/optimization/assets/js/templates/details-view/index.js:159
+#: modules/optimization/assets/js/templates/list-view/index.js:89
+#: modules/optimization/assets/js/templates/meta-box/index.js:118
+msgid "Restore original"
+msgstr "Restaurar la original"
+
+#: modules/optimization/components/admin-bulk-actions.php:18
+#: assets/build/control.js:17
+#: modules/optimization/assets/js/templates/optimization-details/index.js:95
+msgid "Optimize"
+msgstr "Optimizar"
+
+#. Translators: %s - max file size
+#: modules/optimization/classes/validate-image.php:105
+#: modules/optimization/classes/validate-image.php:114
+#: assets/build/control.js:19
+#: modules/optimization/assets/js/templates/optimization-details/index.js:116
+msgid "File is too large. Max size is %s"
+msgstr "El archivo es demasiado grande. El tamaño máximo es %s"
+
+#: modules/optimization/classes/validate-image.php:39
+msgid "Can't optimize this file. If the issue persists, Contact Support"
+msgstr "No se puede optimizar este archivo. Si el problema persiste, ponte en contacto con el servicio de soporte"
+
+#: modules/optimization/classes/validate-image.php:55
+#: modules/optimization/classes/validate-image.php:97
+msgid "File is missing. Verify the upload"
+msgstr "Falta un archivo. Verifica la subida"
+
+#: modules/connect/rest/authorize.php:50 modules/oauth/rest/connect-init.php:38
+msgid "You are already connected"
+msgstr "Ya estás conectado"
+
+#: modules/oauth/rest/activate.php:45
+msgid "Already activated"
+msgstr "Ya activado"
+
+#: modules/oauth/rest/activate.php:38 modules/oauth/rest/deactivate.php:38
+#: modules/oauth/rest/get-subscriptions.php:38
+msgid "Please connect first"
+msgstr "Conéctate primero"
+
+#: modules/oauth/components/connect-pointer.php:23
+msgid "You’re one click away from improving your site’s performance dramatically!"
+msgstr "¡Estás a un clic de mejorar drásticamente el rendimiento de tu sitio!"
+
+#: modules/core/components/conflicts.php:38
+msgid "Having more than one may result in unexpected results."
+msgstr "Tener más de uno puede dar lugar a resultados inesperados."
+
+#: modules/optimization/components/list-view-pointer.php:22
+msgid "Switch to list view"
+msgstr "Cambiar a vista de lista"
+
+#: modules/core/components/conflicts.php:31
+msgid "Image optimizer has detected multiple active image optimization plugins."
+msgstr "El optimizador de imágenes ha detectado varios plugins de optimización de imágenes activos."
+
+#: classes/rest/route.php:367 classes/route.php:339
+msgid "Both `message` and `code` keys must be provided"
+msgstr "Deben proporcionarse las claves «message» y «code»."
+
+#: modules/settings/module.php:113 modules/settings/module.php:114
+#: assets/build/admin.js:37
+msgid "Image Optimizer"
+msgstr "Image Optimizer"
+
+#: modules/settings/components/settings-pointer.php:29
+msgid "Head over to the Image Optimization Settings to fine-tune how your media uploads are managed."
+msgstr "Dirígete a los ajustes de optimización de imágenes para afinar cómo se gestionan tus subidas de medios."
+
+#: modules/settings/components/settings-pointer.php:28
+msgid "Image Optimization settings"
+msgstr "Ajustes de la optimización de imágenes"
+
+#: modules/optimization/templates/list-view/loading.php:27
+#: assets/build/control.js:11
+#: modules/optimization/assets/js/templates/list-view/index.js:28
+msgid "Reoptimizing…"
+msgstr "Reoptimizando..."
+
+#: modules/optimization/templates/list-view/loading.php:23
+#: assets/build/control.js:11
+#: modules/optimization/assets/js/templates/list-view/index.js:24
+msgid "Optimizing…"
+msgstr "Optimizando..."
+
+#: modules/optimization/templates/details-view/optimized.php:82
+#: modules/optimization/templates/list-view/optimized.php:69
+#: modules/optimization/templates/meta-box/optimized.php:78
+#: assets/build/control.js:11
+#: modules/optimization/assets/js/templates/details-view/index.js:147
+#: modules/optimization/assets/js/templates/list-view/index.js:95
+#: modules/optimization/assets/js/templates/meta-box/index.js:124
+msgid "Reoptimize"
+msgstr "Reoptimizar"
+
+#: modules/optimization/templates/details-view/optimized.php:67
+#: modules/optimization/templates/list-view/optimized.php:50
+#: modules/optimization/templates/meta-box/optimized.php:59
+msgid "%1$s%% (%2$s)"
+msgstr "%1$s%% (%2$s)"
+
+#: modules/optimization/rest/optimize-bulk.php:90
+msgid "Bulk re-optimization is already in progress"
+msgstr "La reoptimización por lotes ya está en marcha"
+
+#: modules/optimization/rest/optimize-bulk.php:72
+msgid "Bulk optimization is already in progress"
+msgstr "La optimización por lotes ya está en marcha"
+
+#: modules/optimization/rest/cancel-bulk-optimization.php:49
+msgid "Bulk optimization is not in progress"
+msgstr "La optimización por lotes no está en curso"
+
+#: modules/optimization/components/list-view-pointer.php:23
+msgid "Get the most out of your optimizing options. Use the List view to quickly optimize your uploaded images with Image Optimizer."
+msgstr "Saca el máximo partido a tus opciones de optimización. Utiliza la vista «Lista» para optimizar rápidamente tus imágenes subidas con Image Optimizer."
+
+#: modules/core/components/not-connected-modal.php:39 assets/build/admin.js:11
+#: assets/build/admin.js:37
+msgid "Connect to start"
+msgstr "Conectar para empezar"
+
+#: modules/optimization/templates/details-view/optimized.php:61
+#: modules/optimization/templates/list-view/optimized.php:45
+#: modules/optimization/templates/meta-box/optimized.php:54
+#: assets/build/control.js:11
+#: modules/optimization/assets/js/templates/details-view/index.js:128
+#: modules/optimization/assets/js/templates/list-view/index.js:81
+#: modules/optimization/assets/js/templates/meta-box/index.js:105
+msgid "Overall saving"
+msgstr "Ahorro global"
+
+#: modules/optimization/templates/details-view/optimized.php:28
+#: modules/optimization/templates/list-view/optimized.php:17
+#: modules/optimization/templates/meta-box/optimized.php:25
+#: assets/build/control.js:11
+#: modules/optimization/assets/js/templates/details-view/index.js:111
+#: modules/optimization/assets/js/templates/list-view/index.js:66
+#: modules/optimization/assets/js/templates/meta-box/index.js:88
+msgid "Image sizes optimized"
+msgstr "Tamaños de imagen optimizados"
+
+#: modules/core/module.php:205
+msgid "Connect"
+msgstr "Conectar"

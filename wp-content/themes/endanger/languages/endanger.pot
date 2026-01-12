@@ -1,0 +1,328 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Endanger\n"
+"POT-Creation-Date: 2016-10-16 18:05+0530\n"
+"PO-Revision-Date: 2016-10-16 18:05+0530\n"
+"Last-Translator: \n"
+"Language-Team: Grace Themes <support@gracethemes.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _;__;_e;gettext;gettext_noop;esc_attr;esc_attr__;"
+"esc_attr_e;esc_html;esc_html__;esc_html_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:14
+msgid "404 Not Found"
+msgstr ""
+
+#: 404.php:17
+msgid ""
+"Looks like you have taken a wrong turn.....<br />Don't worry... it happens "
+"to the best of us."
+msgstr ""
+
+#: comments.php:36 comments.php:56
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:37 comments.php:57
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:38 comments.php:58
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:68
+msgid "Comments are closed."
+msgstr ""
+
+#: content-page.php:18 content-single.php:26 content.php:33 image.php:59
+#: template-full-width.php:25
+msgid "Pages:"
+msgstr ""
+
+#: content-page.php:23 content-single.php:37 image.php:33 image.php:64
+#: inc/template-tags.php:23
+msgid "Edit"
+msgstr ""
+
+#: content.php:26
+msgid "Read More &raquo;"
+msgstr ""
+
+#: content.php:30
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: footer.php:30
+msgid "All Rights Reserved"
+msgstr ""
+
+#: footer.php:33
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: footer.php:33
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: functions.php:39
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:40
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:52
+msgid "Blog Sidebar"
+msgstr ""
+
+#: functions.php:53
+msgid "Appears on blog page sidebar"
+msgstr ""
+
+#: functions.php:62
+msgid "Footer Widget 1"
+msgstr ""
+
+#: functions.php:63 functions.php:73 functions.php:83 functions.php:93
+msgid "Appears on footer"
+msgstr ""
+
+#: functions.php:72
+msgid "Footer Widget 2"
+msgstr ""
+
+#: functions.php:82
+msgid "Footer Widget 3"
+msgstr ""
+
+#: functions.php:92
+msgid "Footer Widget 4"
+msgstr ""
+
+#: header.php:32
+msgid "Menu"
+msgstr ""
+
+#: header.php:140
+msgid "Read More"
+msgstr ""
+
+#: image.php:23
+#, php-format
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> at <a href=\"%3$s\">%4$s &times; %5$s</a> in <a "
+"href=\"%6$s\" rel=\"gallery\">%7$s</a>"
+msgstr ""
+
+#: image.php:38
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr ""
+
+#: image.php:39
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/about-themes.php:11 inc/about-themes.php:22
+msgid "About Theme Info"
+msgstr ""
+
+#: inc/about-themes.php:24
+msgid ""
+"Endanger is a Free Adventure WordPress theme. It is Perfect for all "
+"Corporate, Professional, personal, sport, news and any type of business. It "
+"is user friendly customizer options and Compatible in wordPress Latest "
+"Version. also Compatible with WooCommerce, Nextgen gallery ,Contact Form 7 "
+"and many WordPress popular plugins."
+msgstr ""
+
+#: inc/about-themes.php:25
+msgid "Theme Features"
+msgstr ""
+
+#: inc/about-themes.php:29 inc/about-themes.php:59
+msgid "Theme Customizer"
+msgstr ""
+
+#: inc/about-themes.php:30
+msgid ""
+"The built-in customizer panel quickly change aspects of the design and "
+"display changes live before saving them."
+msgstr ""
+
+#: inc/about-themes.php:34 inc/about-themes.php:60
+msgid "Responsive Ready"
+msgstr ""
+
+#: inc/about-themes.php:35
+msgid ""
+"The themes layout will automatically adjust and fit on any screen resolution "
+"and looks great on any device. Fully optimized for iPhone and iPad."
+msgstr ""
+
+#: inc/about-themes.php:39 inc/about-themes.php:61
+msgid "Cross Browser Compatible"
+msgstr ""
+
+#: inc/about-themes.php:40
+msgid ""
+"Our themes are tested in all mordern web browsers and compatible with the "
+"latest version including Chrome,Firefox, Safari, Opera, IE11 and above."
+msgstr ""
+
+#: inc/about-themes.php:44 inc/about-themes.php:62
+msgid "E-commerce"
+msgstr ""
+
+#: inc/about-themes.php:45
+msgid ""
+"Fully compatible with WooCommerce plugin. Just install the plugin and turn "
+"your site into a full featured online shop and start selling products."
+msgstr ""
+
+#: inc/about-themes.php:53
+msgid "Live Demo"
+msgstr ""
+
+#: inc/about-themes.php:54
+msgid "Purchase Pro"
+msgstr ""
+
+#: inc/about-themes.php:55
+msgid "Documentation"
+msgstr ""
+
+#: inc/about-themes.php:63
+msgid "Contact Form 7 Plugin Compatible"
+msgstr ""
+
+#: inc/about-themes.php:64
+msgid "User Friendly"
+msgstr ""
+
+#: inc/about-themes.php:65
+msgid "Translation Ready"
+msgstr ""
+
+#: inc/about-themes.php:66
+msgid "Many Other Plugins  Compatible"
+msgstr ""
+
+#: inc/customizer.php:37
+msgid "Color Scheme"
+msgstr ""
+
+#: inc/customizer.php:38
+msgid "More color options in PRO Version"
+msgstr ""
+
+#: inc/customizer.php:48
+msgid "Slider Settings"
+msgstr ""
+
+#: inc/customizer.php:50
+msgid ""
+"Featured Image Size Should be same ( 1400x600 ) More slider settings "
+"available in PRO Version."
+msgstr ""
+
+#: inc/customizer.php:61
+msgid "Select page for slide one:"
+msgstr ""
+
+#: inc/customizer.php:73
+msgid "Select page for slide two:"
+msgstr ""
+
+#: inc/customizer.php:85
+msgid "Select page for slide three:"
+msgstr ""
+
+#: inc/customizer.php:97
+msgid "Add text for slide read more button"
+msgstr ""
+
+#: inc/customizer.php:110 inc/customizer.php:142 inc/customizer.php:202
+msgid "Uncheck To Enable This Section"
+msgstr ""
+
+#: inc/customizer.php:118
+msgid "Homepage About Us Section"
+msgstr ""
+
+#: inc/customizer.php:119
+msgid "Select Page from the dropdown for about us section"
+msgstr ""
+
+#: inc/customizer.php:148
+msgid "Homepage Four Boxes Section"
+msgstr ""
+
+#: inc/customizer.php:149
+msgid "Select Pages from the dropdown for homepage four boxes section"
+msgstr ""
+
+#: inc/template-tags.php:23
+msgid "Pingback:"
+msgstr ""
+
+#: inc/template-tags.php:36
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/template-tags.php:127
+#, php-format
+msgid ""
+"<span class=\"posted-on\">Published %1$s</span><span class=\"byline\"> by "
+"%2$s</span>"
+msgstr ""
+
+#: no-results.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: no-results.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: no-results.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: no-results.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: sidebar.php:11
+msgid "Category"
+msgstr ""
+
+#: sidebar.php:18
+msgid "Archives"
+msgstr ""
+
+#: sidebar.php:25
+msgid "Meta"
+msgstr ""

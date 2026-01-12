@@ -1,0 +1,1757 @@
+/*!
+Theme Name: zalbi-theme
+Theme URI: http://underscores.me/
+Author: Yeray Garrido
+Author URI: https://github.com/Garridoparrayeray
+Description: Tema a medida para Zalbi Aisia eta abenturs
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: zalbi
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+zalbi-theme is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+	- Normalize
+	- Box sizing
+# Base
+	- Typography
+	- Elements
+	- Links
+	- Forms
+## Layouts
+# Components
+	- Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# plugins
+	- Jetpack infinite scroll
+# Utilities
+	- Accessibility
+	- Alignments
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+
+/* Normalize
+--------------------------------------------- */
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+	 ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+}
+
+/* Sections
+	 ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+	margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+	display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+/* Grouping content
+	 ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+/* Text-level semantics
+	 ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+	background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+	border-bottom: none;
+	text-decoration: underline;
+	text-decoration: underline dotted;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+	font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+/* Embedded content
+	 ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+	border-style: none;
+}
+
+/* Forms
+	 ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+	overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+	text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+	padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *		`fieldset` elements in all browsers.
+ */
+legend {
+	box-sizing: border-box;
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0;
+	white-space: normal;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+	vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+	overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
+}
+
+/* Interactive
+	 ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+	display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+	display: list-item;
+}
+
+/* Misc
+	 ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+	display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+	display: none;
+}
+
+/* Box sizing
+--------------------------------------------- */
+
+/* Inherit box-sizing to more easily change it's value on a component level.
+@link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: #404040;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", courier, monospace;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+/* Elements
+--------------------------------------------- */
+body {
+	background: #fff;
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	margin: 0 0 1.5em 3em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+figure {
+	margin: 1em 0;
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+/* Links
+--------------------------------------------- */
+a {
+	color: #4169e1;
+}
+
+a:visited {
+	color: #800080;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #191970;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+/* Forms
+--------------------------------------------- */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: #ccc #ccc #bbb;
+	border-radius: 3px;
+	background: #e6e6e6;
+	color: rgba(0, 0, 0, 0.8);
+	line-height: 1;
+	padding: 0.6em 1em 0.4em;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa;
+}
+
+button:active,
+button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+	border-color: #aaa #bbb #bbb;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+select {
+	border: 1px solid #ccc;
+}
+
+textarea {
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+/* Navigation
+--------------------------------------------- */
+.main-navigation {
+	display: flex;
+
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	display: block;
+	left: auto;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation li {
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: flex;
+	}
+}
+
+.site-main .comment-navigation,
+.site-main
+.posts-navigation,
+.site-main
+.post-navigation {
+	margin: 0 0 1.5em;
+}
+
+.comment-navigation .nav-links,
+.posts-navigation .nav-links,
+.post-navigation .nav-links {
+	display: flex;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	flex: 1 0 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	text-align: end;
+	flex: 1 0 50%;
+}
+
+/* Posts and pages
+--------------------------------------------- */
+.sticky {
+	display: block;
+}
+
+.post,
+.page {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/* Comments
+--------------------------------------------- */
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/* Widgets
+--------------------------------------------- */
+.widget {
+	margin: 0 0 1.5em;
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/* Media
+--------------------------------------------- */
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/* Captions
+--------------------------------------------- */
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/* Galleries
+--------------------------------------------- */
+.gallery {
+	margin-bottom: 1.5em;
+	display: grid;
+	grid-gap: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+
+.gallery-columns-2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery-columns-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-columns-4 {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-columns-5 {
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.gallery-columns-6 {
+	grid-template-columns: repeat(6, 1fr);
+}
+
+.gallery-columns-7 {
+	grid-template-columns: repeat(7, 1fr);
+}
+
+.gallery-columns-8 {
+	grid-template-columns: repeat(8, 1fr);
+}
+
+.gallery-columns-9 {
+	grid-template-columns: repeat(9, 1fr);
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
+
+/* Jetpack infinite scroll
+--------------------------------------------- */
+
+/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	display: none;
+}
+
+/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+
+/* Accessibility
+--------------------------------------------- */
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 700;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+
+/* Do not show the outline on the skip link target. */
+#primary[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/* Alignments
+--------------------------------------------- */
+.alignleft {
+
+	/*rtl:ignore*/
+	float: left;
+
+	/*rtl:ignore*/
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.alignright {
+
+	/*rtl:ignore*/
+	float: right;
+
+	/*rtl:ignore*/
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.5em;
+}
+/* --- ZALBI ESTILOS GLOBALES --- */
+:root {
+  --c-purple: #302b70;
+  --c-pink: #e70075;
+  --c-orange: #f48020;
+  --c-green: #00955e;
+  --c-blue: #009bdf;
+  --c-lime: #cedc00;
+  --bg-light: #f4f7f6;
+  --text-main: #333;
+  --font-head: "Nunito", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-light);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+.btn {
+  font-family: var(--font-head);
+  font-weight: 800;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 15px;
+}
+
+.container {
+  padding: 0 20px;
+}
+.container > h2{
+    text-align: center;
+    color: var(--c-purple);
+
+}
+/* --- HEADER & NAVEGACIÓN --- */
+.header {
+  background: white;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+ 
+}
+.header-container {
+    display: flex;
+    align-items: center;     /* Centrado verticalmente */
+    justify-content:space-between; /* Uno a cada lado */
+    flex-wrap: nowrap;       /* Que no bajen a la siguiente línea */
+
+}
+
+/* Logo */
+.custom-logo-link {
+    display: block;
+    max-width: 90px; /* Mismo tamaño que arriba */
+}
+/*.site-branding {
+    display: flex;
+    align-items: center;
+    margin-right: auto !important;
+
+}*/
+
+
+.custom-logo {
+    width: 90px !important;       /* Fuerza el ancho */
+    max-width: 100% !important;   /* Que nunca se salga de la pantalla */
+    height: auto !important;      /* Mantiene la proporción */
+    display: block;
+}
+
+.site-branding a {
+    display: block;
+    max-width: 90px;
+}
+
+/* --- ESTILOS DE BOTÓN PARA EL MENÚ --- */
+
+/* Ajustamos el contenedor para dar espacio a los botones */
+.main-navigation ul {
+  gap: 10px; /* Espacio entre botones */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.main-navigation ul li {
+  list-style: none;
+}
+
+
+.main-navigation ul li a {
+  /* Color y Fondo */
+  background-color: var(--c-purple);
+  color: white;
+  
+  /* Tipografía */
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 15px; 
+  
+  /* Forma de botón */
+  padding: 10px 25px; /* Relleno: arriba/abajo 10px, lados 25px */
+  border-radius: 50px; /* Bordes completamente redondeados */
+  border: 2px solid var(--c-purple); /* Borde del mismo color para solidez */
+  
+  /* Efectos */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: all 0.3s ease; /* Animación suave */
+}
+
+/* Estado Hover (Al pasar el ratón) */
+.main-navigation ul li a:hover {
+  background-color: var(--c-pink);
+  border-color: var(--c-pink);
+  transform: translateY(-3px); /* El botón "sube" un poco */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* La sombra crece */
+}
+/* Botón Hamburguesa (Oculto en escritorio) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--c-purple);
+    cursor: pointer;
+}
+/* --- BOTONES --- */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+}
+.container > a{
+    background: var(--c-lime); color: var(--c-purple);
+}
+.btn-pink {
+  background: var(--c-pink);
+}
+
+.btn-pink:hover {
+  transform: translateY(-3px);
+  background: #c20061;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--c-purple);
+  color: var(--c-purple);
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background: var(--c-purple);
+  color: white;
+}
+
+/* --- HERO SECTIONS --- */
+.hero-home {
+  background: var(--c-blue);
+  padding: 100px 0;
+  color: white;
+  text-align: center;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.hero-home > .container > p{
+    margin: 0 20px 10px 0;
+}
+.hero-catalog {
+  background: var(--c-purple);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+/* --- CATÁLOGO & FILTROS --- */
+.filter-wrapper {
+  margin-top: -30px;
+}
+
+.filter-box {
+  background: white;
+  padding: 15px;
+  border-radius: 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* --- TARJETAS DE PRODUCTO (GRID) --- */
+.product-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-tag {
+  font-size: 13px; /* Antes 0.8rem */
+  font-weight: 800;
+  text-transform: uppercase;
+}
+/* Colores específicos para etiquetas */
+.tag-orange {
+  color: var(--c-orange);
+}
+.tag-pink {
+  color: var(--c-pink);
+}
+.tag-blue {
+  color: var(--c-blue);
+}
+.tag-purple {
+  color: var(--c-purple);
+}
+.tag-green {
+  color: var(--c-green);
+}
+.tag-lime   { color: var(--c-lime); }
+.card-title {
+  margin: 5px 0 10px;
+  font-size: 24px; /* Antes 1.5rem */
+}
+
+.card-specs {
+  font-size: 14px; /* Antes 0.9rem */
+  color: #666;
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+.card-specs li {
+  margin-bottom: 5px;
+}
+
+.card-specs i {
+  margin-right: 5px;
+  color: var(--c-purple);
+}
+
+/* --- FICHA DE PRODUCTO (DETALLE) --- */
+.breadcrumbs {
+  margin-bottom: 20px;
+  color: #666;
+  font-size: 14px; /* Antes 0.9rem */
+}
+
+.breadcrumbs span {
+  color: var(--c-purple);
+  font-weight: bold;
+}
+
+.product-detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.gallery-main {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.gallery-thumbs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.product-desc {
+  margin: 25px 0;
+  color: #555;
+}
+
+/* Tabla de especificaciones */
+.spec-box {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.spec-row span i {
+  color: var(--c-purple);
+  width: 25px;
+}
+
+/* Caja de Llamada a la Acción (CTA) */
+.cta-box {
+  background: var(--c-purple);
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* --- FOOTER --- */
+/* --- FOOTER --- */
+footer {
+  background: var(--c-purple);
+  color: white;
+  padding: 40px 0 20px; /* Reducimos el padding inferior */
+  margin-top: 50px;
+  width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+/* El contenedor interno del footer */
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Grid de 3 columnas alineado a la izquierda */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: left; /* Alineado a la izquierda, no centrado */
+    margin-bottom: 30px;
+}
+
+/* Títulos de las columnas del footer */
+footer h4 {
+    color: var(--c-lime);
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+
+footer ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: var(--c-lime);
+    padding-left: 5px;
+}
+
+footer i {
+    width: 25px; 
+    color: var(--c-lime);
+    text-align: center;
+}
+
+/* Línea de Copyright */
+.copyright-bar {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+
+/* --- CLASES DE UTILIDAD --- */
+.section-pad {
+  padding: 60px 0;
+}
+
+.text-center {
+     text-align: center;
+  margin-bottom: 40px; 
+}
+
+.options {
+    display: flex;          
+    flex-wrap: wrap;        /* OBLIGATORIO: Esto hace que bajen si no caben */
+    gap: 30px;              /* Espacio entre tarjetas */
+    justify-content: flex-start; /* Alinea a la izquierda (o usa 'center' si prefieres) */
+    width: 100%;
+    justify-content:center;
+    
+  
+}
+
+/* Ajuste para que las tarjetas tengan un tamaño base pero sean flexibles */
+.product-card {
+    flex: 1 1 333px;        /* Crece, encoge, base de 300px */
+    width: 100%;            /* Asegura ancho en móviles */
+    margin-bottom: 20px;   /* Espacio extra por seguridad */
+    max-width: 380px;
+}
+
+.options-box{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: center;
+    color: var(--c-purple);
+    border-radius: 30px;   
+    border: 3px solid #eee; /* Borde base por si falla el color */
+    border-radius: 30px;    /* Bordes muy redondeados como la imagen */
+    padding: 100px 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+.options-box:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.section-events{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+
+
+/* Estilo de la Imagen dentro de la tarjeta */
+.options-box img {
+    width: 100%;
+    height: 200px; /* Altura fija para que todas se vean iguales */
+    object-fit: cover; /* Recorta la imagen si no encaja para que no se deforme */
+    border-radius: 0; /* Quitamos el radio por defecto de las imgs globales */
+    border-bottom: 1px solid #eee; /* Pequeña separación visual */
+}
+
+/* Nuevo contenedor para el texto y el botón */
+.card-body {
+    padding: 25px; /* Padding solo para el texto */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Ocupa el espacio restante */
+}
+
+/* Títulos dentro de la tarjeta */
+.options-box h3 {
+    margin: 10px 0 15px; /* Ajuste de márgenes */
+    font-size: 22px;
+}
+
+/* Texto descriptivo */
+.options-box p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    flex-grow: 1; /* Empuja el botón "Ver más" hacia abajo */
+}
+
+/* Enlace "Ver más" simulado */
+.link-more {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: auto;
+    display: block; /* Para que coja el margen automático */
+}
+
+
+/* --- VARIANTES DE COLOR (Bordes) --- */
+/* Mantenemos esto igual que antes */
+
+/* Rosa */
+.border-pink { border-color: var(--c-pink); }
+.options-box:hover.border-pink { border-color: var(--c-pink); }
+
+/* Naranja */
+.border-orange { border-color: var(--c-orange); }
+.options-box:hover.border-orange { border-color: var(--c-orange); }
+
+/* Verde */
+.border-green { border-color: var(--c-green); }
+.options-box:hover.border-green { border-color: var(--c-green); }
+/* --- RESPONSIVE (MÓVIL) --- */
+@media (max-width: 768px) {
+/* 1. ANIMACIÓN DEL BOTÓN HAMBURGUESA */
+  .menu-toggle {
+    display: block;
+    width: 100%;
+    text-align: right;
+    font-size: 24px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .main-navigation.toggled .menu-toggle {
+    transform: rotate(90deg);
+    color: var(--c-pink);
+  }
+
+  /* 2. CONTENEDOR DEL MENÚ (Tarjeta flotante) */
+  .main-navigation ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    
+    /* Forma de la tarjeta completa */
+    border-radius: 0 0 20px 20px; /* Redondeado solo abajo */
+    padding: 10px 0; /* Padding vertical */
+    gap: 0; /* Sin espacio entre elementos, para que se toquen */
+    
+    /* Animación de bajada */
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.4s ease-in-out;
+    
+    box-shadow: 0 15px 30px rgba(48, 43, 112, 0.15);
+    overflow: hidden;
+    z-index: 9999;
+  }
+
+  /* ESTADO ABIERTO */
+  .main-navigation.toggled ul {
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* 3. ELEMENTOS DE LISTA (Rectangulares y limpios) */
+  .main-navigation ul li {
+    width: 100%;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #f0f0f0; /* Línea separadora sutil */
+    margin: 0; /* Asegurar que no hay márgenes externos */
+  }
+  
+  /* Quitar última línea */
+  .main-navigation ul li:last-child {
+    border-bottom: none;
+  }
+
+  /* ESTILO DE LOS ENLACES EN MÓVIL (Sobrescribimos los botones redondos) */
+  .main-navigation ul li a {
+    display: block;
+    width: 100%;
+    text-align: left; /* Texto a la izquierda queda más elegante en lista */
+    padding: 15px 25px; /* Espacio cómodo para el dedo */
+    
+    /* RESEAMOS ESTILOS DE ESCRITORIO */
+    border-radius: 0; /* Cuadrados */
+    background-color: transparent; /* Fondo transparente */
+    color: var(--c-purple); /* Texto morado */
+    border: none;
+    box-shadow: none;
+    font-size: 16px;
+  }
+
+  /* Hover en Móvil */
+  .main-navigation ul li a:hover {
+    background-color: #f9f9f9; /* Fondo gris muy clarito al tocar */
+    color: var(--c-pink);
+    transform: none; /* No movemos el botón */
+    border: none;
+    padding-left: 35px; /* Pequeño desplazamiento de texto a la derecha */
+    transition: 0.3s;
+  }
+
+  /* Animación de entrada en cascada */
+  .main-navigation.toggled ul li { opacity: 1; transform: translateX(0); }
+  .main-navigation.toggled ul li:nth-child(1) { transition-delay: 0.1s; }
+  .main-navigation.toggled ul li:nth-child(2) { transition-delay: 0.2s; }
+  .main-navigation.toggled ul li:nth-child(3) { transition-delay: 0.3s; }
+  .main-navigation.toggled ul li:nth-child(4) { transition-delay: 0.4s; }
+  .main-navigation.toggled ul li:nth-child(5) { transition-delay: 0.5s; }
+
+  /* Ajustes del formulario en móvil */
+  .form-row { flex-direction: column; gap: 0; }
+  .zalbi-form { padding: 25px; }
+  .form-group.half { width: 100%; }
+  
+  .menu-btn a {
+      display: inline-block; /* Para que el botón se vea bien en la lista vertical */
+  }
+
+  .product-detail-layout {
+    grid-template-columns: 1fr; /* Una columna en móvil */
+    gap: 30px;
+  }
+
+  .hero-home h1 {
+    font-size: 40px; 
+  }
+
+  /*---------CONTACT FORM-----*/
+      .form-row {
+        flex-direction: column; /* En móvil, una columna debajo de otra */
+        gap: 0;
+    }
+    
+    .zalbi-form {
+        padding: 25px; 
+    }
+    .zalbi-form h1{
+      justify-self: center;
+      
+    }
+       .form-group.half {
+        width: 50%; /* En PC, nombre y email ocupan la mitad cada uno */
+    }
+    
+    .zalbi-form .wpcf7-submit {
+        width: auto; 
+        padding: 12px 50px;
+    }
+  
+    
+}
+
+/* =========================================
+   CLASES DE UTILIDAD EXTRA 
+   ========================================= */
+
+/* Fondos y Márgenes */
+.bg-white { background: white; }
+.mb-30 { margin-bottom: 30px; }
+
+/* Títulos y Textos */
+.section-title {
+    color: var(--c-purple);
+    margin-bottom: 40px;
+}
+
+.cat-title {
+    margin-top: 15px;
+}
+
+.event-title {
+    margin-top: 10px;
+}
+
+/* Colores de Texto */
+.text-purple { color: var(--c-purple); }
+.text-pink { color: var(--c-pink); }
+.text-orange { color: var(--c-orange); }
+.text-green { color: var(--c-green); }
+
+/* Botones y Enlaces Específicos */
+.btn-lime {
+    background: var(--c-lime);
+    color: var(--c-purple);
+}
+.btn-lime:hover {
+    background: #e6f500;
+}
+
+.link-view-all {
+    color: var(--c-pink);
+    font-weight: bold;
+}
+
+
+
+
+/* --- ESTILOS CONTACT FORM 7 (ZALBI) --- */
+
+.zalbi-form {
+    background: white;
+    padding: 40px;
+    border-radius: 30px; /* Bordes muy redondeados como tus tarjetas */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra suave */
+    max-width: 800px;
+    margin: 0 auto; /* Centrado */
+}
+
+/* Etiquetas */
+.zalbi-form label {
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--c-purple);
+    margin-bottom: 8px;
+    display: block;
+    font-size: 0.95rem;
+}
+
+/* Inputs y Textareas */
+.zalbi-form input[type="text"],
+.zalbi-form input[type="email"],
+.zalbi-form textarea {
+    width: 100%;
+    background: #f9f9f9;
+    border: 2px solid #eee;
+    border-radius: 15px; /* Redondeado medio para inputs */
+    padding: 15px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: #555;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Efecto al hacer clic en un campo (Focus) */
+.zalbi-form input:focus,
+.zalbi-form textarea:focus {
+    border-color: var(--c-purple);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(48, 43, 112, 0.1); /* Resplandor morado suave */
+}
+
+/* Estructura de Columnas (Flexbox) */
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Botón de Enviar (Ajustes extra sobre tu clase .btn) */
+.zalbi-form .wpcf7-submit {
+    width: 100%; /* Botón ancho completo en móvil */
+    font-size: 1.1rem;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+

@@ -1,0 +1,113 @@
+.tabs-container {
+  position: relative;
+}
+
+.tabs-container::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 20px;
+  background: linear-gradient(to left, var(--background), transparent);
+}
+
+@media(min-width: 992px) {
+  .tabs-container::after {
+    display: none;
+  }
+}
+
+.tabs {
+  display: flex;
+  margin-top: 28px;
+  margin-bottom: 26px;
+  padding-bottom: 10px;
+  overflow-x: auto;
+}
+
+@media(min-width: 992px) {
+  .tabs {
+    margin-bottom: 36px;
+    padding-bottom: 0;
+  }
+}
+
+.tabs__button {
+  width: auto;
+  background: var(--default-tab-button-background);
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  color: var(--default-tab-button-color);
+  padding: 14px;
+  border-right: 1px solid var(--default-tab-button-border);
+  border-left: 1px solid var(--default-tab-button-background);
+  border-bottom: 3px solid var(--default-tab-button-background);
+  transition: .2s all;
+}
+
+@media(min-width: 700px) {
+  .tabs__button {
+    flex-grow: 1;
+    font-size: 17px;
+  }
+}
+
+@media(min-width: 1366px) {
+  .tabs__button {
+    width: 25%;
+    padding: 14px 0;
+    font-size: 17px;
+    line-height: 27px;
+  }
+}
+
+@media(min-width: 1518px) {
+  .tabs__button {
+    font-size: 18px;
+  }
+}
+
+.tabs__button:first-child {
+  border-right: 1px solid var(--default-tab-button-border);
+  border-left: none;
+  border-radius: var(--border-radius) 0px 0px 0px;
+}
+
+.tabs__button:last-child {
+  border-right: none;
+  border-radius: 0px var(--border-radius) 0px 0px;
+}
+
+.tabs__button:hover {
+  background: var(--primary);
+  color: var(--primary-invert);
+  border-color: var(--primary);
+}
+
+.tabs__button--active {
+  background: white;
+  color: var(--primary);
+  border-color: var(--primary);
+  position: relative;
+}
+
+.tabs__button--active::before {
+  content: '';
+  height: 0px;
+  width: 0px;
+  transition: .3s all;
+  background: transparent;
+  border-top: 5px solid transparent;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid var(--primary);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,102 @@
+{
+	"translation-revision-date": "2025-01-11 11:40+0100",
+	"generator": "WP-CLI/2.6.0",
+	"source": "dist/app.js",
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": {
+				"domain": "messages",
+				"lang": "fr_FR\\n",
+				"plural-forms": "nplurals=2; plural=(n != 1);"
+			},
+			"AI + Block Editor": [
+				"AI + éditeur de blocs"
+			],
+			"Headline": [
+				"Titre"
+			],
+			"Slug": [
+				"Limace"
+			],
+			"SEO Keywords": [
+				"Mots-clés SEO"
+			],
+			"Summary": [
+				"Résumé"
+			],
+			"Use Casual Tone": [
+				"Utilisez un ton décontracté"
+			],
+			"Use Official Tone": [
+				"Utilisez le ton officiel"
+			],
+			"Use Descriptive Tone": [
+				"Utilisez un ton descriptif"
+			],
+			"Use Narrative Tone": [
+				"Utiliser un ton narratif"
+			],
+			"Use Aggressive Tone": [
+				"Utilisez un ton agressif"
+			],
+			"Generate": [
+				"Générer"
+			],
+			"AI is generating text, please hold on for a bit.": [
+				"L'IA génère du texte, veuillez patienter un instant."
+			],
+			"Switch AI Provider": [
+				"Changer de fournisseur d’IA"
+			],
+			"Social Media Hashtags": [
+				"Hashtags des médias sociaux"
+			],
+			"Success! AI Provider switched successfully to OpenAI": [
+				"Succès ! Le fournisseur d'IA a migré avec succès vers OpenAI"
+			],
+			"Success! AI Provider switched successfully to Gemini": [
+				"Succès ! Le fournisseur d'IA a migré avec succès vers Gemini"
+			],
+			"Success! AI Provider switched successfully to DeepSeek": [
+				"Succès ! Le fournisseur d'IA a adopté DeepSeek avec succès."
+			],
+			"Success! AI Provider switched successfully to ChatGPT": [
+				"Succès ! Le fournisseur d'IA a migré avec succès vers ChatGPT."
+			],
+			"OpenAI": [
+				"OpenAI"
+			],
+			"Gemini": [
+				"Gemini"
+			],
+			"DeepSeek": [
+				"DeepSeek"
+			],
+			"ChatGPT": [
+				"ChatGPT"
+			],
+			"Success! AI Provider switched successfully.": [
+				"Succès ! Le fournisseur d'IA a été remplacé avec succès."
+			],
+			"Error! Failed to switch AI Provider.": [
+				"Erreur ! Échec du changement de fournisseur d'IA."
+			],
+			"Error! Failed to fetch Headline. Please check your error logs or console for more info.": [
+				"Erreur ! Impossible de récupérer le titre. Veuillez consulter vos journaux d’erreurs ou la console pour plus d’informations."
+			],
+			"Error! Failed to fetch Slug. Please check your error logs or console for more info.": [
+				"Erreur ! Impossible de récupérer le slug. Veuillez consulter vos journaux d’erreurs ou la console pour plus d’informations."
+			],
+			"Error! Failed to fetch SEO Keywords. Please check your error logs or console for more info.": [
+				"Erreur ! Impossible de récupérer les mots-clés SEO. Veuillez consulter vos journaux d’erreurs ou la console pour plus d’informations."
+			],
+			"Error! Failed to fetch Summary. Please check your error logs or console for more info.": [
+				"Erreur ! Impossible de récupérer le résumé. Veuillez consulter vos journaux d’erreurs ou la console pour plus d’informations."
+			],
+			"Error! Failed to fetch Hashtags. Please check your error logs or console for more info.": [
+				"Erreur ! Impossible de récupérer les hashtags. Veuillez consulter vos journaux d’erreurs ou la console pour plus d’informations."
+			]
+		}
+	}
+}

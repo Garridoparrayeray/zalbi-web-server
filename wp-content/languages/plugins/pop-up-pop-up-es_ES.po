@@ -1,0 +1,169 @@
+# Translation of Plugins - Pop-up - Stable (latest release) in Spanish (Spain)
+# This file is distributed under the same license as the Plugins - Pop-up - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-05-27 12:20:24+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: es\n"
+"Project-Id-Version: Plugins - Pop-up - Stable (latest release)\n"
+
+#. Author URI of the plugin
+#: pop-up-pop-up.php
+msgid "https://inisev.com"
+msgstr "https://inisev.com"
+
+#. Author of the plugin
+#: pop-up-pop-up.php
+msgid "Inisev"
+msgstr "Inisev"
+
+#: pop-up-pop-up.php:206
+msgid "options saved"
+msgstr "opciones guardadas"
+
+#: pop-up-pop-up.php:188
+msgid "saved"
+msgstr "guardado"
+
+#: views/main.php:31
+msgid "Pop-up status cannot be changed - Please login to <a href=\"%s\" target=\"_blank\">MyPopUps.com</a> to learn more."
+msgstr "El estado del mensaje emergente no se puede cambiar. Por favor, accede a <a href=\"%s\" target=\"_blank\">MyPopUps.com</a> para saber más."
+
+#: views/main.php:28
+msgid "Server not responding"
+msgstr "El servidor no responde"
+
+#: views/main.php:27
+msgid "MyPopUps origin response error"
+msgstr "Error de respuesta de origen de MyPopUps"
+
+#: views/main.php:26
+msgid "Autentification Error"
+msgstr "Error de identificación"
+
+#: views/main.php:25
+msgid "Show More Pop-ups"
+msgstr "Mostrar más mensajes emergentes"
+
+#: pop-up-pop-up.php:293
+msgid "Server not return domain code"
+msgstr "El servidor no devuelve el código del dominio"
+
+#: pop-up-pop-up.php:287 pop-up-pop-up.php:339
+msgid "Please check permission, I could not save this file: "
+msgstr "Por favor, comprueba los permisos. No se ha podido guardar este archivo: "
+
+#: views/main.php:99
+msgid "This will establish connection to the chat servers"
+msgstr "Esto establecerá la conexión con los servidores del chat"
+
+#: views/main.php:97
+msgid "Connect with support (click to load)"
+msgstr "Conecta con el soporte (haz clic para cargar)"
+
+#: views/main.php:46
+msgid "(connects you to MyPopUps)"
+msgstr "(te conecta con MyPopUps)"
+
+#: views/main.php:137
+msgid "Pop-up cannot be enabled - please go to your <a href=\"%s\">Dashboard on Mypopups</a> to see why and fix the issues"
+msgstr "No se puede activar el mensaje emergente. Por favor, ve a tu <a href=\"%s\">escritorio en MyPopUps</a> para ver por qué y corregir los problemas"
+
+#: views/main.php:30 views/main.php:128
+msgid "Disabled"
+msgstr "Desactivado"
+
+#: views/main.php:29 views/main.php:125
+msgid "Enabled"
+msgstr "Activado"
+
+#: views/main.php:120
+msgid "Configure on MyPopUps"
+msgstr "Configurar en MyPopUps"
+
+#: views/main.php:79
+msgid "Visit your homepage"
+msgstr "Visita tu página de inicio"
+
+#: views/main.php:74
+msgid "If you haven’t set up any pop-up yet, <a href='%s' target='_blank'>do it here</a>."
+msgstr "Si aún no has configurado ningún mensaje emergente, <a href='%s' target='_blank'>hazlo aquí</a>."
+
+#: views/main.php:72
+msgid "(and click on “Refresh” above)."
+msgstr "(y haz clic arriba en «Actualizar»)."
+
+#: views/main.php:71
+msgid "on MyPopUps so that they get displayed here"
+msgstr "en MyPopUps para que se visualicen aquí"
+
+#: views/main.php:70
+msgid "launch your pop-up(s)"
+msgstr "ejecuta tus mensajes emergentes"
+
+#: views/main.php:69
+msgid "Please now"
+msgstr "Por favor, ahora"
+
+#: views/main.php:64
+msgid "Create a new pop-up"
+msgstr "Crear un nuevo mensaje emergente"
+
+#: views/main.php:61
+msgid "Refresh"
+msgstr "Actualizar"
+
+#: views/main.php:51
+msgid "After you did this, please click on «Yes, I already did!» above."
+msgstr "Después de hacerlo, por favor, haz clic arriba en «Sí, ¡ya lo he hecho!»."
+
+#: views/main.php:50
+msgid "The first step is that you create your Pop-Ups on MyPopUps.com."
+msgstr "El primer paso es que crees tus mensajes emergentes en MyPopUps.com."
+
+#: views/main.php:45
+msgid "<h3>Yes</h3> I already did!"
+msgstr "<h3>Sí,</h3> ¡ya lo he hecho!"
+
+#: views/main.php:42
+msgid "(takes less then 60 secs)"
+msgstr "(tarda menos de 60 segundos)"
+
+#: views/main.php:41
+msgid "<h3>No</h3> Let me do that now!"
+msgstr "<h3>No,</h3> ¡déjame hacerlo ahora!"
+
+#: views/main.php:37
+msgid "Did you already create your PopUp(s) on <a target=\"_blank\" href=\"%s\">MyPopUps.com?</a>"
+msgstr "¿Ya has creado tus mensajes emergentes en <a target=\"_blank\" href=\"%s\">MyPopUps.com?</a>"
+
+#: views/main.php:34
+msgid "Welcome to MyPopUps!"
+msgstr "¡Bienvenido a MyPopUps!"
+
+#: pop-up-pop-up.php:150
+msgid "Powered by <b>MyPopUps</b>"
+msgstr "Funciona con <b>MyPopUps</b>"
+
+#: pop-up-pop-up.php:138
+msgid "Need help? Go to our <a href=\"%s\">support center</a>."
+msgstr "¿Necesitas ayuda? Ve a nuestro <a href=\"%s\">centro de soporte</a>."
+
+#. Plugin Name of the plugin
+#: pop-up-pop-up.php pop-up-pop-up.php:106 views/main.php:58
+msgid "MyPopUps"
+msgstr "MyPopUps"
+
+#. Plugin URI of the plugin
+#: pop-up-pop-up.php
+msgid "https://mypopups.com"
+msgstr "https://mypopups.com"
+
+#. Description of the plugin
+#: pop-up-pop-up.php
+msgid "Create pop-ups without coding! Our builder allows you to create amazing looking pop-ups for a wide range of purposes (newsletter subscription, discounts, cookies etc.)."
+msgstr "¡Crea mensajes emergentes sin programar! Nuestro maquetador te permite crear mensajes emergentes con un aspecto sensacional para una amplia gama de propósitos (suscripción a boletines de noticias, descuentos, cookies, etc.)."
