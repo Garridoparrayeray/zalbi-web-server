@@ -7,10 +7,9 @@ get_header();
 // Si en el admin se llama "Mecánicos", aquí pon 'mecanicos'.
 // Si se llama "Pequeños", aquí pon 'pequenos'.
 $orden_personalizado = array(
-    'hinchable',   
-    'acuatico',   
-    'deportivo',    
-    'eventos'
+    'hinchables',   
+    'acuaticos',   
+    'deportivos',    
 );
 ?>
 
