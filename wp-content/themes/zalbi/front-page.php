@@ -74,7 +74,7 @@ get_header();
     <section class="section-pad">
         <div class="container">
             <div class="text-center mb-30">
-                <h2 class="text-purple">Nos adaptamos a tu espacio y presupuesto</h2>
+                <h2 class="text-purple">Nos adaptamos a tu espacio y presupuesto, os damos un presupuesto sin ningún compromiso</h2>
                 <p>Organizamos eventos a medida para todo tipo de instituciones</p>
             </div>
             
