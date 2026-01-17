@@ -1153,7 +1153,7 @@ img {
   color: white;
 }
 
-/* --- HERO SECTIONS --- */
+/* --- HERO SECTIONS WITH HOMEPAGE --- */
 .hero-home {
   background: var(--c-blue);
   padding: 100px 0;
@@ -1171,7 +1171,49 @@ img {
   padding: 60px 0;
   text-align: center;
 }
+/* --- QUIENES SOMOS --- */
+.about-text {
+    max-width: 800px;
+    margin: 0 auto; /* Centrar el bloque */
+    font-size: 1.1rem; /* Letra un poco más grande */
+    line-height: 1.8;
+    color: #555;
+}
+.about-text b {
+    color: var(--c-purple);
+}
 
+/* --- SECCIÓN CLIENTES (GRID) --- */
+.clients-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 30px; /* Espacio entre ellas */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.client-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 2px solid transparent; /* Para que al hover no baile */
+    transition: 0.3s;
+}
+
+.client-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.client-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+/*----- FIN HOMEPAGE(WITH HERO) -------*/
 /* --- CATÁLOGO & FILTROS --- */
 .filter-wrapper {
   margin-top: -30px;
@@ -1323,7 +1365,6 @@ img {
 }
 
 /* --- FOOTER --- */
-/* --- FOOTER --- */
 footer {
   background: var(--c-purple);
   color: white;
@@ -1430,7 +1471,7 @@ footer i {
     border-radius: 30px;    /* Bordes muy redondeados como la imagen */
     padding: 100px 25px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
+    width: 800px;
 }
 .options-box:hover{
     transform: translateY(-10px);
@@ -1626,6 +1667,14 @@ footer i {
     font-size: 40px; 
   }
 
+  .clients-grid {
+        grid-template-columns: 1fr; /* Una sola columna en móvil */
+    }
+    
+    .about-text {
+        text-align: justify; /* En móvil se lee mejor justificado a veces, o center */
+        padding: 0 10px;
+    }
   /*---------CONTACT FORM-----*/
       .form-row {
         flex-direction: column; /* En móvil, una columna debajo de otra */
@@ -1657,6 +1706,22 @@ footer i {
 
 /* Fondos y Márgenes */
 .bg-white { background: white; }
+/* Fondos suaves para las tarjetas ADAPTACION HOME PAGE*/
+.bg-green-light {
+    background-color: #f0fdf4; /* Verde muy clarito */
+    border-bottom: 4px solid var(--c-green);
+}
+
+.bg-pink-light {
+    background-color: #fdf2f8; /* Rosa muy clarito */
+    border-bottom: 4px solid var(--c-pink);
+}
+
+
+.bg-light {
+    background-color: #fbfbfb; /* Fondo gris muy suave para separar secciones */
+}
+
 .mb-30 { margin-bottom: 30px; }
 
 /* Títulos y Textos */
@@ -1678,6 +1743,7 @@ footer i {
 .text-pink { color: var(--c-pink); }
 .text-orange { color: var(--c-orange); }
 .text-green { color: var(--c-green); }
+.text-blue { color: var(--c-blue); }
 
 /* Botones y Enlaces Específicos */
 .btn-lime {
@@ -1692,7 +1758,6 @@ footer i {
     color: var(--c-pink);
     font-weight: bold;
 }
-
 
 
 

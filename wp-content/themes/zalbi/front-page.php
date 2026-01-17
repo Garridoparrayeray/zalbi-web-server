@@ -6,8 +6,7 @@
  */
 get_header();
 ?>
-
-    <section class="hero-home">
+  <section class="hero-home">
       <div class="container">
         <h1>Tu Mundo de Diversión</h1>
         <p>
@@ -17,16 +16,19 @@ get_header();
         <a href="<?php echo home_url('/catalogo'); ?>" class="btn">Ver Catálogo Completo</a>
       </div>
     </section>
-  <section class="section-pad">
+<section class="section-pad">
       <div class="container text-center">
-        <h1>¿QUIENES SOMOS?</h1>
-        <p style = "max-width: 1000px; justify-self: center; text-align: justify">
-          <b>Somos Zalbi aisia eta abentura</b> una empresa dedicada al ocio y entretenimiento infantil con mas de <b>15 años</b> de experiencia trabajando en bizkaia y euskadi (también nos trasladamos fuera) que haremos tu celebración un evento increible. Siempre con la atenta mirada de nuestros monitore/as
-        </p>
+        <h1>¿QUIÉNES SOMOS?</h1>
+        <div class="about-text">
+          <p>
+            <b>Somos Zalbi Aisia eta Abentura</b>, una empresa dedicada al ocio y entretenimiento infantil con más de <b>15 años</b> de experiencia trabajando en Bizkaia y Euskadi (también nos trasladamos fuera). Haremos de tu celebración un evento increíble. Siempre con la atenta mirada de nuestros monitores/as.
+          </p>
+        </div>
       </div>
     </section>
-    <section class="section-pad">
-        <div class="container">
+
+
+    <section class="section-pad bg-light"> <div class="container">
             <h2 class="text-center section-title">¿Qué estás buscando?</h2>
             
             <div class="options">
@@ -35,7 +37,7 @@ get_header();
                     <img src="<?php echo get_template_directory_uri(); ?>/img/hinchables-grandes.jpg" alt="Hinchables Grandes">
                     <div class="card-body">
                         <h3 class="text-pink">HINCHABLES</h3>
-                        <p>Disponemos de una gran variedad de castillos hinchables de distintos tamaños y para diferentes edades. Siempre bajo la supervisión de un monitor/a</p>
+                        <p>Disponemos de una gran variedad de castillos hinchables de distintos tamaños y para diferentes edades.</p>
                         <span class="link-more text-pink">Ver más &rarr;</span>
                     </div>
                 </a>
@@ -43,9 +45,8 @@ get_header();
                 <a href="<?php echo home_url('/catalogo/?cat=acuaticos'); ?>" class="options-box border-blue">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/hinchables-medianos.jpg" alt="Acuaticos"> 
                     <div class="card-body">
-                        <h3 class="text-blue">FIESTA DE ESPUMA E HINCHABLES ACUATICOS</h3>
-                        <p>Para cuando el calor aprieta la mejor espuma e hinchables de agua</p>
-                        <span class="link-more text-orange">Ver más &rarr;</span>
+                        <h3 class="text-blue">ACUÁTICOS</h3> <p>Para cuando el calor aprieta la mejor espuma e hinchables de agua.</p>
+                        <span class="link-more text-blue">Ver más &rarr;</span>
                     </div>
                 </a>
 
@@ -53,12 +54,13 @@ get_header();
                     <img src="<?php echo get_template_directory_uri(); ?>/img/eventos.jpg" alt="Atracciones deportivas">
                     <div class="card-body">
                         <h3 class="text-orange">ATRACCIONES DEPORTIVAS</h3>
-                        <p>Atracciones deportivas e hinchables para pasar un buen rato, para la motricidad y como no, risas garantizadas.</p>
-                        <span class="link-more text-green">Ver más &rarr;</span>
+                        <p>Hinchables deportivos para pasar un buen rato, trabajar la motricidad y risas garantizadas.</p>
+                        <span class="link-more text-orange">Ver más &rarr;</span>
                     </div>
                 </a>
-                <a href="<?php echo home_url('/eventos') ?>" class = "options-box border-green">
-                  <img src="" alt="<?php echo get_template_directory_uri(); ?>/img/eventos.jpg" alt="Eventos">
+                
+                <a href="<?php echo home_url('/eventos') ?>" class="options-box border-green">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/eventos.jpg" alt="Eventos">
                   <div class="card-body">
                         <h3 class="text-green">EVENTOS</h3>
                         <p>Fiestas de la espuma, tirolinas y animación musical completa.</p>
@@ -69,16 +71,25 @@ get_header();
         </div>
     </section>
 
-<section class="section-pad">
-        <div class="container" style="max-width: 800px; justify-content: center">
-            <div class="text-center">
-                <h3 class="text-purple">Nos adaptamos a tu espacio y presupuesto</h3>
-                <br>
-                <h4 class="text-green">AYUNTAMIENTOS Y COMISIÓN DE FIESTAS</h4>
-                <p style = "justify-content: center">Organizamos fiestas y eventos para vuestro pueblo, bien a ayuntamientos o bien a comisiones de fiestas.</p>
+    <section class="section-pad">
+        <div class="container">
+            <div class="text-center mb-30">
+                <h2 class="text-purple">Nos adaptamos a tu espacio y presupuesto</h2>
+                <p>Organizamos eventos a medida para todo tipo de instituciones</p>
+            </div>
+            
+            <div class="clients-grid">
                 
-                <h4 class="text-pink">COLEGIOS Y ASOCIACIONES</h4>
-                <p style = "justify-content: center">Celebramos fiestas de fin de curso o cualquier evento que tengas, garantizando profesionalidad y diversión.</p>
+                <div class="client-card bg-green-light">
+                    <h3 class="text-green">AYUNTAMIENTOS Y COMISIONES</h3>
+                    <p>Organizamos fiestas y eventos patronales para vuestro pueblo. Gestión integral para ayuntamientos y comisiones de fiestas.</p>
+                </div>
+
+                <div class="client-card bg-pink-light">
+                    <h3 class="text-pink">COLEGIOS Y ASOCIACIONES</h3>
+                    <p>Celebramos fiestas de fin de curso, semanas culturales o cualquier evento asociativo, garantizando profesionalidad y diversión.</p>
+                </div>
+
             </div>
         </div>
     </section>
