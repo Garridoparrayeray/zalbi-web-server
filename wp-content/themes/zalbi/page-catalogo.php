@@ -7,11 +7,9 @@ get_header();
 // Si en el admin se llama "Mecánicos", aquí pon 'mecanicos'.
 // Si se llama "Pequeños", aquí pon 'pequenos'.
 $orden_personalizado = array(
-    'pequenos',   
-    'medianos',   
-    'grandes',    
-    'deportivos', 
-    'mecanicos',
+    'hinchable',   
+    'acuatico',   
+    'deportivo',    
     'eventos'
 );
 ?>
@@ -96,11 +94,11 @@ $orden_personalizado = array(
 
                     // --- 2. TRADUCTOR VISUAL (Lo que ve el cliente) ---
                     $nombres_visuales = array(
-                        'tag-purple' => 'Pequeño',
-                        'tag-orange' => 'Mediano',
-                        'tag-pink'   => 'Grande',
-                        'tag-blue'   => 'Deportivo',
-                        'tag-lime'   => 'Mecánicos', 
+                        //'tag-purple' => 'Pequeño', --> no usado se guarda para posibles actualizaciones
+                        'tag-orange' => 'Deportivo',
+                        'tag-pink'   => 'Hinchable',
+                        'tag-blue'   => 'Acuatico',
+                        //'tag-lime'   => 'Mecánicos', --> igual que purple 
                         'tag-green'  => 'Evento'
                     );
                     $nombre_visual = isset($nombres_visuales[$tag_color]) ? $nombres_visuales[$tag_color] : 'Hinchable';
@@ -154,7 +152,6 @@ $orden_personalizado = array(
                     // BOTÓN INACTIVO (Limpiamos todos los colores posibles)
                     btn.classList.add('btn-outline');
                     btn.classList.remove('btn-pink'); 
-                    // Añadimos btn-lime y btn-purple a la limpieza
                     btn.classList.remove('btn-orange', 'btn-blue', 'btn-green', 'btn-lime', 'btn-purple'); 
                 }
             });
