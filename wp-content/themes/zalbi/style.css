@@ -1497,6 +1497,9 @@ footer i {
 /* Naranja */
 .border-orange { border-color: var(--c-orange); }
 .options-box:hover.border-orange { border-color: var(--c-orange); }
+/* Azul */
+.border-blue { border-color: var(--c-blue); }
+.options-box:hover.border-blue { border-color: var(--c-blue); }
 
 /* Verde */
 .border-green { border-color: var(--c-green); }

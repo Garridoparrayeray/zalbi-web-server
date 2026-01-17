@@ -20,7 +20,7 @@ get_header();
   <section class="section-pad">
       <div class="container text-center">
         <h1>¿QUIENES SOMOS?</h1>
-        <p style = "max-width: 800px">
+        <p style = "max-width: 1000px; justify-self: center; text-align: justify">
           <b>Somos Zalbi aisia eta abentura</b> una empresa dedicada al ocio y entretenimiento infantil con mas de <b>15 años</b> de experiencia trabajando en bizkaia y euskadi (también nos trasladamos fuera) que haremos tu celebración un evento increible. Siempre con la atenta mirada de nuestros monitore/as
         </p>
       </div>
@@ -40,24 +40,24 @@ get_header();
                     </div>
                 </a>
 
-                <a href="<?php echo home_url('/catalogo/?cat=acuaticos'); ?>" class="options-box border-orange">
+                <a href="<?php echo home_url('/catalogo/?cat=acuaticos'); ?>" class="options-box border-blue">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/hinchables-medianos.jpg" alt="Acuaticos"> 
                     <div class="card-body">
-                        <h3 class="text-orange">FIESTA DE ESPUMA E HINCHABLES ACUATICOS</h3>
+                        <h3 class="text-blue">FIESTA DE ESPUMA E HINCHABLES ACUATICOS</h3>
                         <p>Para cuando el calor aprieta la mejor espuma e hinchables de agua</p>
                         <span class="link-more text-orange">Ver más &rarr;</span>
                     </div>
                 </a>
 
-                <a href="<?php echo home_url('/catalogo/?=deportivos'); ?>" class="options-box border-green">
+                <a href="<?php echo home_url('/catalogo/?=deportivos'); ?>" class="options-box border-orange">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/eventos.jpg" alt="Atracciones deportivas">
                     <div class="card-body">
-                        <h3 class="text-green">ATRACCIONES DEPORTIVAS</h3>
+                        <h3 class="text-orange">ATRACCIONES DEPORTIVAS</h3>
                         <p>Atracciones deportivas e hinchables para pasar un buen rato, para la motricidad y como no, risas garantizadas.</p>
                         <span class="link-more text-green">Ver más &rarr;</span>
                     </div>
                 </a>
-                <a href="<?php echo home_url('/eventos') ?>" class = "options-box border-lime">
+                <a href="<?php echo home_url('/eventos') ?>" class = "options-box border-green">
                   <img src="" alt="<?php echo get_template_directory_uri(); ?>/img/eventos.jpg" alt="Eventos">
                   <div class="card-body">
                         <h3 class="text-green">EVENTOS</h3>
@@ -70,15 +70,15 @@ get_header();
     </section>
 
 <section class="section-pad">
-        <div class="container" style="max-width: 800px;">
+        <div class="container" style="max-width: 800px; justify-content: center">
             <div class="text-center">
                 <h3 class="text-purple">Nos adaptamos a tu espacio y presupuesto</h3>
                 <br>
                 <h4 class="text-green">AYUNTAMIENTOS Y COMISIÓN DE FIESTAS</h4>
-                <p>Organizamos fiestas y eventos para vuestro pueblo, bien a ayuntamientos o bien a comisiones de fiestas.</p>
+                <p style = "justify-content: center">Organizamos fiestas y eventos para vuestro pueblo, bien a ayuntamientos o bien a comisiones de fiestas.</p>
                 
                 <h4 class="text-pink">COLEGIOS Y ASOCIACIONES</h4>
-                <p>Celebramos fiestas de fin de curso o cualquier evento que tengas, garantizando profesionalidad y diversión.</p>
+                <p style = "justify-content: center">Celebramos fiestas de fin de curso o cualquier evento que tengas, garantizando profesionalidad y diversión.</p>
             </div>
         </div>
     </section>
