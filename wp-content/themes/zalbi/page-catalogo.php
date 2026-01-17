@@ -15,7 +15,7 @@ $orden_personalizado = array(
 
     <section class="hero-catalog">
         <div class="container">
-            <h1>Nuestros Hinchables</h1>
+            <h1>Nuestras atracciones</h1>
             <p>Selecciona una categoría para filtrar</p>
         </div>
     </section>
