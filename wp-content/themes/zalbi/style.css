@@ -1501,6 +1501,10 @@ footer i {
 /* Verde */
 .border-green { border-color: var(--c-green); }
 .options-box:hover.border-green { border-color: var(--c-green); }
+/* Lima */
+.border-lime { border-color: var(--c-lime); }
+.options-box:hover.border-lime { border-color: var(--c-lime); }
+
 /* --- RESPONSIVE (MÓVIL) --- */
 @media (max-width: 768px) {
 /* 1. ANIMACIÓN DEL BOTÓN HAMBURGUESA */
