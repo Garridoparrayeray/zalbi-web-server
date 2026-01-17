@@ -50,7 +50,7 @@ get_header();
                     </div>
                 </a>
 
-                <a href="<?php echo home_url('/catalogo/?=deportivos'); ?>" class="options-box border-orange">
+                <a href="<?php echo home_url('/catalogo/?cat=deportivos'); ?>" class="options-box border-orange">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/eventos.jpg" alt="Atracciones deportivas">
                     <div class="card-body">
                         <h3 class="text-orange">ATRACCIONES DEPORTIVAS</h3>

@@ -18,18 +18,18 @@
             <div class="footer-grid">
                 
                 <div>
-                    <a href="<?php echo home_url(); ?>" class="logo" style="color: white; font-size: 2rem; text-decoration: none; font-weight: 800;">ZALBI</a>
+                    <a href="<?php echo home_url(); ?>" class="logo" style="color: white; font-size: 2rem; text-decoration: none; font-weight: 800;"></a>
                     <p style="margin-top: 15px; opacity: 0.8; font-size: 14px;">
                         Expertos en ocio, aventura e hinchables. Llevamos la diversión segura a colegios, ayuntamientos y fiestas privadas.
                     </p>
                 </div>
 
-                <div>
+               <div>
                     <h4>Contacto</h4>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Polígono ZALBI, Nave 4</li>
-                        <li><i class="fas fa-phone"></i> 600 000 000</li>
-                        <li><i class="fas fa-envelope"></i> info@zalbi.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Telleri 11-A, 48600 Sopela</li>
+                        <li><i class="fas fa-phone"></i> 658 88 73 58</li>
+                        <li><i class="fas fa-envelope"></i> aritzzalbidea@yahoo.es</li>
                     </ul>
                 </div>
 
