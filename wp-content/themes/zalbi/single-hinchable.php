@@ -10,11 +10,11 @@
     
     // 2. Definimos el Traductor de Colores (Lo definimos aquí para usarlo arriba y abajo)
     $nombres_visuales = array(
-        'tag-purple' => 'Pequeño',
-        'tag-orange' => 'Mediano',
-        'tag-pink'   => 'Grande',
-        'tag-blue'   => 'Deportivo',
-        'tag-lime'   => 'Mecánicos', 
+        //'tag-purple' => 'Pequeño',
+        'tag-orange' => 'Atraccion deportiva',
+        'tag-pink'   => 'Hinchable',
+        'tag-blue'   => 'Acuático',
+        //'tag-lime'   => 'Mecánicos', 
         'tag-green'  => 'Evento'
     );
     
@@ -59,16 +59,6 @@
                     <div class="spec-row">
                         <span><i class="fas fa-users"></i> Capacidad</span>
                         <strong><?php echo $capacidad; ?></strong>
-                    </div>
-
-                    <div class="spec-row">
-                        <span><i class="fas fa-plug"></i> Potencia</span>
-                        <strong><?php echo $potencia; ?></strong>
-                    </div>
-
-                    <div class="spec-row" style="border:none; padding-bottom:0;">
-                        <span><i class="fas fa-shield-alt"></i> Certificación</span>
-                        <strong style="color: var(--c-green);"><?php echo $certificacion; ?></strong>
                     </div>
                 </div>
 
