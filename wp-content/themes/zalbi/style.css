@@ -1316,16 +1316,19 @@ img {
   gap: 50px;
 }
 
-.gallery-main {
-  width: 100%;
-  border-radius: 20px;
-  margin-bottom: 20px;
-}
-
 .gallery-thumbs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+}
+.gallery-main {
+    width: 100%;          /* Ocupa todo el ancho de su columna */
+    height: 450px;        /* FORZAMOS UNA ALTURA FIJA IGUAL PARA TODAS */
+    object-fit: cover;    /* ESTA ES LA CLAVE: Recorta la imagen para llenar el hueco sin deformarla */
+    border-radius: 20px;  /* Bordes redondeados */
+    background-color: #f9f9f9; /* Color de fondo por si la imagen es transparente */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Sombra suave para que destaque */
+    display: block;
 }
 
 .product-desc {
@@ -1697,7 +1700,9 @@ footer i {
         padding: 12px 50px;
     }
   
-    
+    .gallery-main {
+        height: 300px; /* En móvil la hacemos un poco más bajita */
+    }
 }
 
 /* =========================================
