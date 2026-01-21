@@ -16,9 +16,7 @@ get_header();
             </div>
     </div>
 
-    <section class="section-pad">
-        <div class="container grid-3">
-            
+    <section class="section-pad">            
             <?php
             // CONSULTA: Traer todos los 'evento'
             $args = array(
@@ -67,7 +65,6 @@ get_header();
             endif; 
             ?>
 
-        </div>
     </section>
 
 <?php get_footer(); ?>
