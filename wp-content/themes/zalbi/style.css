@@ -1436,7 +1436,8 @@ footer i {
 
 /* --- CLASES DE UTILIDAD --- */
 .section-pad {
-  padding: 60px 0;
+  padding: 60px 20px;
+
 }
 
 .text-center {
