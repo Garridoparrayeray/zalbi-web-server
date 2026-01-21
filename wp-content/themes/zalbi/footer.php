@@ -10,7 +10,7 @@
             <div class="footer-grid">
                 
                 <div class="footer-col footer-brand">
-<div class="site-branding">
+<div class="site-branding" style="position: inline-table;margin-bottom:8px;">
             <?php
             // Si hay logo personalizado en el personalizador, úsalo. Si no, texto.
             if (has_custom_logo()) {
