@@ -55,3 +55,6 @@ Thumbs.db
 # SASS #
 ##########
 .sass-cache
+# Ignorar copias de seguridad
+*.wpress
+wp-content/ai1wm-backups/*
