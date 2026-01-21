@@ -1368,69 +1368,146 @@ img {
 }
 
 /* --- FOOTER --- */
-footer {
-  background: var(--c-purple);
-  color: white;
-  padding: 40px 0 20px; /* Reducimos el padding inferior */
-  margin-top: 50px;
-  width: 100%; /* Asegura que ocupe todo el ancho */
+/* =========================================
+   ESTILOS NUEVOS FOOTER (ZALBI)
+   ========================================= */
+
+.site-footer {
+    background-color: var(--c-purple); /* Fondo Morado Corporativo */
+    color: white;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-size: 15px;
+    border-top: 5px solid var(--c-lime); /* Borde superior Lima para contraste */
 }
 
-/* El contenedor interno del footer */
-footer .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Grid de 3 columnas alineado a la izquierda */
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    text-align: left; /* Alineado a la izquierda, no centrado */
-    margin-bottom: 30px;
+    grid-template-columns: 1.5fr 1fr 1fr; /* La primera columna más ancha */
+    gap: 40px;
+    margin-bottom: 40px;
 }
 
-/* Títulos de las columnas del footer */
-footer h4 {
-    color: var(--c-lime);
-    margin-bottom: 15px;
-    font-size: 18px;
-    text-transform: uppercase;
-}
-
-
-footer ul li {
-    margin-bottom: 10px;
-    font-size: 14px;
-    opacity: 0.9;
-}
-
-footer a {
+/* --- LOGO Y MARCA --- */
+.footer-logo {
+    font-family: var(--font-head);
+    font-size: 2.2rem;
+    font-weight: 900;
     color: white;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    opacity: 0.8;
+    line-height: 1.6;
+    max-width: 300px; /* Para que el texto no se estire demasiado */
+}
+
+/* --- TÍTULOS DE SECCIÓN --- */
+.footer-title {
+    color: var(--c-lime); /* Color Lima para destacar */
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Línea decorativa debajo del título */
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 3px;
+    background-color: var(--c-pink); /* Un toque rosa */
+    border-radius: 2px;
+}
+
+/* --- LISTAS Y ENLACES --- */
+.footer-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center; /* Alinear iconos y texto */
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
-footer a:hover {
-    color: var(--c-lime);
-    padding-left: 5px;
+.footer-links a:hover {
+    color: var(--c-lime); /* Al pasar el ratón se pone Lima */
+    padding-left: 5px; /* Pequeño movimiento a la derecha */
 }
 
-footer i {
-    width: 25px; 
+/* Iconos de contacto */
+.contact-list i {
+    width: 25px; /* Ancho fijo para que el texto se alinee */
     color: var(--c-lime);
+    font-size: 16px;
     text-align: center;
+    margin-right: 10px;
 }
 
-/* Línea de Copyright */
+/* --- COPYRIGHT BAR --- */
 .copyright-bar {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea muy sutil */
+    padding-top: 25px;
     text-align: center;
     font-size: 13px;
-    opacity: 0.6;
+    color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    justify-content: space-between; /* Texto a izq, créditos a der */
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.credits a {
+    color: white;
+    border-bottom: 1px dotted rgba(255,255,255,0.5);
+}
+
+.credits a:hover {
+    color: var(--c-lime);
+}
+
+/* --- RESPONSIVE FOOTER --- */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* Todo en una columna */
+        gap: 30px;
+        text-align: center; /* Centrado en móvil queda mejor */
+    }
+    
+    .footer-brand p {
+        margin: 0 auto; /* Centrar párrafo */
+    }
+
+    .footer-title::after {
+        left: 50%; /* Centrar la rayita decorativa */
+        transform: translateX(-50%);
+    }
+    
+    .footer-links li {
+        justify-content: center; /* Centrar items de lista */
+    }
+    
+    .copyright-bar {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 
