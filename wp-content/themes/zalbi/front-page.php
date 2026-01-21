@@ -44,7 +44,7 @@ get_header();
                 </a>
 
                 <a href="<?php echo home_url('/catalogo/?cat=acuaticos'); ?>" class="options-box border-blue">
-                    <img src="PEGAR_AQUI_LA_URL_DE_ACUATICOS" alt="Acuáticos"> 
+                    <img src="https://dev-zalbi-aisia-eta-abentura.pantheonsite.io/wp-content/uploads/2026/01/" alt="Acuáticos"> 
                     
                     <div class="card-body">
                         <h3 class="text-blue">ACUÁTICOS</h3> 
@@ -54,7 +54,7 @@ get_header();
                 </a>
 
                 <a href="<?php echo home_url('/catalogo/?cat=deportivos'); ?>" class="options-box border-orange">
-                     <img src="PEGAR_AQUI_LA_URL_DE_DEPORTIVOS" alt="Atracciones deportivas">
+                     <img src="https://dev-zalbi-aisia-eta-abentura.pantheonsite.io/wp-content/uploads/2026/01/" alt="Atracciones deportivas">
                     
                     <div class="card-body">
                         <h3 class="text-orange">ATRACCIONES DEPORTIVAS</h3>
