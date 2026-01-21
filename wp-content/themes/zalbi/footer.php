@@ -10,7 +10,7 @@
             <div class="footer-grid">
                 
                 <div class="footer-col footer-brand">
-<div class="site-branding" style="position: inline-table;margin-bottom:8px;">
+<div class="site-branding" style="display: inline-flex;margin-bottom:8px;">
             <?php
             // Si hay logo personalizado en el personalizador, úsalo. Si no, texto.
             if (has_custom_logo()) {
@@ -26,22 +26,27 @@
                     </p>
                 </div>
 
-                <div class="footer-col">
-                    <h4 class="footer-title">Contacto</h4>
-                    <ul class="footer-links contact-list">
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i> 
-                            <span>Telleri 11-A, 48600 Sopela</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone-alt"></i> 
-                            <a href="tel:+34658887358">658 88 73 58</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i> 
-                            <a href="mailto:aritzzalbidea@yahoo.es">aritzzalbidea@yahoo.es</a>
-                        </li>
-                    </ul>
+               <div class="footer-col">
+                    <h4 class="footer-title">Información</h4>
+                    
+                    <?php
+                    // Esto comprueba si hay un menú asignado y lo muestra
+                    if ( has_nav_menu( 'menu-legal' ) ) {
+                        wp_nav_menu( array(
+                            'theme_location' => 'menu-legal',
+                            'menu_class'     => 'footer-links', // Usamos tu clase CSS para que se vea bonito
+                            'container'      => false,          // Quitamos contenedores extra
+                            'depth'          => 1,              // Solo un nivel (sin submenús)
+                        ) );
+                    } else {
+                        // Si no has creado el menú todavía, muestra esto temporalmente
+                        echo '<ul class="footer-links">';
+                        echo '<li><a href="' . home_url('/aviso-legal') . '">Aviso Legal</a></li>';
+                        echo '<li><a href="' . home_url('/politica-privacidad') . '">Política de Privacidad</a></li>';
+                        echo '<li><a href="' . home_url('/politica-cookies') . '">Política de Cookies</a></li>';
+                        echo '</ul>';
+                    }
+                    ?>
                 </div>
 
                 <div class="footer-col">
