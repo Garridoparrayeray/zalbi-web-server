@@ -44,7 +44,7 @@ get_header();
                 </a>
 
                 <a href="<?php echo home_url('/catalogo/?cat=acuaticos'); ?>" class="options-box border-blue">
-                    <img src="https://dev-zalbi-aisia-eta-abentura.pantheonsite.io/wp-content/uploads/2026/01/foto_acuatico_general.jpeg" alt="Acuáticos"> 
+                    <img src="https://dev-zalbi-aisia-eta-abentura.pantheonsite.io/wp-content/uploads/2026/01/espuma1.jpeg" alt="Acuáticos"> 
                     
                     <div class="card-body">
                         <h3 class="text-blue">ACUÁTICOS</h3> 
