@@ -10,8 +10,18 @@
             <div class="footer-grid">
                 
                 <div class="footer-col footer-brand">
-                    <a href="<?php echo home_url(); ?>" class="footer-logo">ZALBI</a>
-                    <p>
+<div class="site-branding">
+            <?php
+            // Si hay logo personalizado en el personalizador, úsalo. Si no, texto.
+            if (has_custom_logo()) {
+                the_custom_logo();
+            } else {
+                ?>
+                <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+                <?php
+            }
+?>
+        </div>                    <p>
                         Expertos en ocio, aventura e hinchables. Llevamos la diversión segura a colegios, ayuntamientos y fiestas privadas en todo Euskadi.
                     </p>
                 </div>

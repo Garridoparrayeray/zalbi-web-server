@@ -1483,32 +1483,6 @@ img {
     color: var(--c-lime);
 }
 
-/* --- RESPONSIVE FOOTER --- */
-@media (max-width: 768px) {
-    .footer-grid {
-        grid-template-columns: 1fr; /* Todo en una columna */
-        gap: 30px;
-        text-align: center; /* Centrado en móvil queda mejor */
-    }
-    
-    .footer-brand p {
-        margin: 0 auto; /* Centrar párrafo */
-    }
-
-    .footer-title::after {
-        left: 50%; /* Centrar la rayita decorativa */
-        transform: translateX(-50%);
-    }
-    
-    .footer-links li {
-        justify-content: center; /* Centrar items de lista */
-    }
-    
-    .copyright-bar {
-        flex-direction: column;
-        text-align: center;
-    }
-}
 
 
 /* --- CLASES DE UTILIDAD --- */
@@ -1790,6 +1764,29 @@ img {
   
     .gallery-main {
         height: 300px; /* En móvil la hacemos un poco más bajita */
+    }
+      .footer-grid {
+        grid-template-columns: 1fr; /* Todo en una columna */
+        gap: 30px;
+        text-align: center; /* Centrado en móvil queda mejor */
+    }
+    
+    .footer-brand p {
+        margin: 0 auto; /* Centrar párrafo */
+    }
+
+    .footer-title::after {
+        left: 50%; /* Centrar la rayita decorativa */
+        transform: translateX(-50%);
+    }
+    
+    .footer-links li {
+        justify-content: center; /* Centrar items de lista */
+    }
+    
+    .copyright-bar {
+        flex-direction: column;
+        text-align: center;
     }
 }
 
