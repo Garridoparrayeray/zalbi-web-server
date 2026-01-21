@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Template Name: Portada ZALBI
  * Pagina principal de la web.
@@ -16,7 +15,8 @@ get_header();
         <a href="<?php echo home_url('/catalogo'); ?>" class="btn">Ver Catálogo Completo</a>
       </div>
     </section>
-<section class="section-pad">
+
+    <section class="section-pad">
       <div class="container text-center">
         <h1>¿QUIÉNES SOMOS?</h1>
         <div class="about-text">
@@ -27,14 +27,15 @@ get_header();
       </div>
     </section>
 
-
-    <section class="section-pad bg-light"> <div class="container">
+    <section class="section-pad bg-light"> 
+        <div class="container">
             <h2 class="text-center section-title">¿Qué estás buscando?</h2>
             
             <div class="options">
                 
                 <a href="<?php echo home_url('/catalogo/?cat=hinchables'); ?>" class="options-box border-pink">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/hinchables-grandes.jpg" alt="Hinchables Grandes">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/WhatsApp-Image-2026-01-19-at-10.40.18.jpeg" alt="Hinchables">
+                    
                     <div class="card-body">
                         <h3 class="text-pink">HINCHABLES</h3>
                         <p>Disponemos de una gran variedad de castillos hinchables de distintos tamaños y para diferentes edades.</p>
@@ -43,15 +44,18 @@ get_header();
                 </a>
 
                 <a href="<?php echo home_url('/catalogo/?cat=acuaticos'); ?>" class="options-box border-blue">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/hinchables-medianos.jpg" alt="Acuaticos"> 
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/foto_acuatico_general.jpeg" alt="Acuáticos"> 
+                    
                     <div class="card-body">
-                        <h3 class="text-blue">ACUÁTICOS</h3> <p>Para cuando el calor aprieta la mejor espuma e hinchables de agua.</p>
+                        <h3 class="text-blue">ACUÁTICOS</h3> 
+                        <p>Para cuando el calor aprieta la mejor espuma e hinchables de agua.</p>
                         <span class="link-more text-blue">Ver más &rarr;</span>
                     </div>
                 </a>
 
                 <a href="<?php echo home_url('/catalogo/?cat=deportivos'); ?>" class="options-box border-orange">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/eventos.jpg" alt="Atracciones deportivas">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/WhatsApp-Image-2026-01-19-at-14.48.29.jpeg" alt="Atracciones deportivas">
+                    
                     <div class="card-body">
                         <h3 class="text-orange">ATRACCIONES DEPORTIVAS</h3>
                         <p>Hinchables deportivos para pasar un buen rato, trabajar la motricidad y risas garantizadas.</p>
@@ -60,10 +64,11 @@ get_header();
                 </a>
                 
                 <a href="<?php echo home_url('/eventos') ?>" class="options-box border-green">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/eventos.jpg" alt="Eventos">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/nombre-foto-eventos.jpg" alt="Eventos">
+                  
                   <div class="card-body">
                         <h3 class="text-green">EVENTOS</h3>
-                        <p>Fiestas de la espuma, tirolinas y animación musical completa.</p>
+                        <p>Talleres y animación musical completa.</p>
                         <span class="link-more text-green">Ver más &rarr;</span>
                     </div>
                 </a>
