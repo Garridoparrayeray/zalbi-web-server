@@ -27,14 +27,14 @@ get_header();
       </div>
     </section>
 
-    <section class="section-pad bg-light"> 
+   <section class="section-pad bg-light"> 
         <div class="container">
             <h2 class="text-center section-title">¿Qué estás buscando?</h2>
             
             <div class="options">
                 
                 <a href="<?php echo home_url('/catalogo/?cat=hinchables'); ?>" class="options-box border-pink">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/WhatsApp-Image-2026-01-19-at-10.40.18.jpeg" alt="Hinchables">
+                    <img src="https://dev-zalbi-aisia-eta-abentura.pantheonsite.io/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-19-at-10.40.18.jpeg" alt="Hinchables">
                     
                     <div class="card-body">
                         <h3 class="text-pink">HINCHABLES</h3>
@@ -44,7 +44,7 @@ get_header();
                 </a>
 
                 <a href="<?php echo home_url('/catalogo/?cat=acuaticos'); ?>" class="options-box border-blue">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/foto_acuatico_general.jpeg" alt="Acuáticos"> 
+                    <img src="PEGAR_AQUI_LA_URL_DE_ACUATICOS" alt="Acuáticos"> 
                     
                     <div class="card-body">
                         <h3 class="text-blue">ACUÁTICOS</h3> 
@@ -54,7 +54,7 @@ get_header();
                 </a>
 
                 <a href="<?php echo home_url('/catalogo/?cat=deportivos'); ?>" class="options-box border-orange">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/WhatsApp-Image-2026-01-19-at-14.48.29.jpeg" alt="Atracciones deportivas">
+                     <img src="PEGAR_AQUI_LA_URL_DE_DEPORTIVOS" alt="Atracciones deportivas">
                     
                     <div class="card-body">
                         <h3 class="text-orange">ATRACCIONES DEPORTIVAS</h3>
@@ -64,7 +64,7 @@ get_header();
                 </a>
                 
                 <a href="<?php echo home_url('/eventos') ?>" class="options-box border-green">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/nombre-foto-eventos.jpg" alt="Eventos">
+                  <img src="PEGAR_AQUI_LA_URL_DE_EVENTOS" alt="Eventos">
                   
                   <div class="card-body">
                         <h3 class="text-green">EVENTOS</h3>
