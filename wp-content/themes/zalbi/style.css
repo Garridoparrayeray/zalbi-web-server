@@ -1368,9 +1368,6 @@ img {
 }
 
 /* --- FOOTER --- */
-/* =========================================
-   ESTILOS NUEVOS FOOTER (ZALBI)
-   ========================================= */
 
 .site-footer {
     background-color: var(--c-purple); /* Fondo Morado Corporativo */
@@ -1378,17 +1375,27 @@ img {
     padding-top: 60px;
     padding-bottom: 20px;
     font-size: 15px;
-    border-top: 5px solid var(--c-lime); /* Borde superior Lima para contraste */
+    border-top: 5px solid var(--c-lime); /* Borde superior Lima */
+    text-align: center; /* <--- ESTO CENTRA TODO EL TEXTO */
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr; /* La primera columna más ancha */
+    /* Cambiamos a 3 columnas IGUALES para que quede simétrico */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 40px;
     margin-bottom: 40px;
+    align-items: start; /* Alinea al inicio verticalmente */
 }
 
 /* --- LOGO Y MARCA --- */
+.site-branding {
+    display: flex !important; /* Forza flex para centrar */
+    justify-content: center;  /* Centra el logo/título */
+    width: 100%;
+    margin-bottom: 15px;
+}
+
 .footer-logo {
     font-family: var(--font-head);
     font-size: 2.2rem;
@@ -1397,35 +1404,37 @@ img {
     text-transform: uppercase;
     letter-spacing: -1px;
     display: inline-block;
-    margin-bottom: 15px;
 }
 
 .footer-brand p {
     opacity: 0.8;
     line-height: 1.6;
-    max-width: 300px; /* Para que el texto no se estire demasiado */
+    margin: 0 auto; /* Centra el bloque de texto */
+    max-width: 300px; 
 }
 
 /* --- TÍTULOS DE SECCIÓN --- */
 .footer-title {
-    color: var(--c-lime); /* Color Lima para destacar */
+    color: var(--c-lime);
     font-size: 1.2rem;
     text-transform: uppercase;
     margin-bottom: 20px;
     position: relative;
     padding-bottom: 10px;
+    display: inline-block; /* Necesario para que la línea se centre respecto al texto */
 }
 
-/* Línea decorativa debajo del título */
+/* Línea decorativa debajo del título (CENTRADA) */
 .footer-title::after {
     content: '';
     position: absolute;
-    left: 0;
+    left: 50%; /* Mueve al centro */
     bottom: 0;
     width: 30px;
     height: 3px;
-    background-color: var(--c-pink); /* Un toque rosa */
+    background-color: var(--c-pink);
     border-radius: 2px;
+    transform: translateX(-50%); /* Corrige el centrado exacto */
 }
 
 /* --- LISTAS Y ENLACES --- */
@@ -1438,7 +1447,8 @@ img {
 .footer-links li {
     margin-bottom: 12px;
     display: flex;
-    align-items: center; /* Alinear iconos y texto */
+    align-items: center; 
+    justify-content: center; /* <--- ESTO CENTRA LOS ICONOS Y TEXTOS */
 }
 
 .footer-links a {
@@ -1448,13 +1458,12 @@ img {
 }
 
 .footer-links a:hover {
-    color: var(--c-lime); /* Al pasar el ratón se pone Lima */
-    padding-left: 5px; /* Pequeño movimiento a la derecha */
+    color: var(--c-lime);
 }
 
 /* Iconos de contacto */
 .contact-list i {
-    width: 25px; /* Ancho fijo para que el texto se alinee */
+    width: 25px; 
     color: var(--c-lime);
     font-size: 16px;
     text-align: center;
@@ -1463,14 +1472,13 @@ img {
 
 /* --- COPYRIGHT BAR --- */
 .copyright-bar {
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea muy sutil */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 25px;
-    text-align: center;
     font-size: 13px;
     color: rgba(255, 255, 255, 0.6);
     display: flex;
-    justify-content: space-between; /* Texto a izq, créditos a der */
-    flex-wrap: wrap;
+    flex-direction: column; /* En columna para que se centren uno bajo otro */
+    align-items: center;    /* Centrado horizontal */
     gap: 10px;
 }
 
@@ -1482,9 +1490,6 @@ img {
 .credits a:hover {
     color: var(--c-lime);
 }
-
-
-
 /* --- CLASES DE UTILIDAD --- */
 .section-pad {
   padding: 60px 20px;
