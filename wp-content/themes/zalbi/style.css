@@ -1542,10 +1542,12 @@ footer i {
 
 /* Naranja */
 .border-orange { border-color: var(--c-orange); }
-.options-box:hover.border-orange { border-color: var(--c-orange); }
+.options-box:hover.border-orange { border-color: var(--c-orange); 
+ padding: 20px 25px;}
 /* Azul */
 .border-blue { border-color: var(--c-blue); }
-.options-box:hover.border-blue { border-color: var(--c-blue); }
+.options-box:hover.border-blue { border-color: var(--c-blue); 
+ padding: 20px 25px;}
 
 /* Verde */
 .border-green { border-color: var(--c-green); }
