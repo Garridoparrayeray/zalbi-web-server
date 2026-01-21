@@ -26,6 +26,24 @@
                     </p>
                 </div>
 
+                <div class="footer-col">
+                    <h4 class="footer-title">Contacto</h4>
+                    <ul class="footer-links contact-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i> 
+                            <span>Telleri 11-A, 48600 Sopela</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i> 
+                            <a href="tel:+34658887358">658 88 73 58</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i> 
+                            <a href="mailto:aritzzalbidea@yahoo.es">aritzzalbidea@yahoo.es</a>
+                        </li>
+                    </ul>
+                </div>
+
                <div class="footer-col">
                     <h4 class="footer-title">Información</h4>
                     
@@ -47,15 +65,6 @@
                         echo '</ul>';
                     }
                     ?>
-                </div>
-
-                <div class="footer-col">
-                    <h4 class="footer-title">Información</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Aviso Legal</a></li>
-                        <li><a href="#">Política de Privacidad</a></li>
-                        <li><a href="#">Política de Cookies</a></li>
-                    </ul>
                 </div>
 
             </div>
