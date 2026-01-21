@@ -1,6 +1,6 @@
 <?php
 /* Template Name: Plantilla Eventos */
-get_header(); 
+get_header();
 ?>
 
     <section class="hero-catalog" style="background: var(--c-green);">
@@ -16,29 +16,33 @@ get_header();
             </div>
     </div>
 
-    <section class="section-pad">            
+    
+    <section class="section-pad">     
+                <div class="container options" id="product-grid">
+       
             <?php
             // CONSULTA: Traer todos los 'evento'
-            $args = array(
+            $args = [
                 'post_type' => 'evento',
                 'posts_per_page' => -1,
-            );
-            $query = new WP_Query($args);
+            ];
+$query = new WP_Query($args);
 
-            if ($query->have_posts()) :
-                while ($query->have_posts()) : $query->the_post();
-                    
-                    // Cargar campos ACF
-                    $tag_texto = get_field('etiqueta_texto');
-                    $tag_color = get_field('etiqueta_color');
-                    $duracion = get_field('duracion');
-                    $publico = get_field('publico');
-            ?>
+if ($query->have_posts()) {
+    while ($query->have_posts()) {
+        $query->the_post();
+
+        // Cargar campos ACF
+        $tag_texto = get_field('etiqueta_texto');
+        $tag_color = get_field('etiqueta_color');
+        $duracion = get_field('duracion');
+        $publico = get_field('publico');
+        ?>
 
             <article class="product-card">
                  <div style="height: 300px; overflow: hidden;">
                      <a href="<?php the_permalink(); ?>">
-                        <?php the_post_thumbnail('medium_large', array('style' => 'width:100%; height:100%; object-fit:contain; background: #f0f0f0;')); ?>
+                        <?php the_post_thumbnail('medium_large', ['style' => 'width:100%; height:100%; object-fit:contain; background: #f0f0f0;']); ?>
                     </a>
                 </div>
                 <div class="card-content">
@@ -57,14 +61,14 @@ get_header();
                 </div>
             </article>
 
-            <?php 
-                endwhile;
-                wp_reset_postdata();
-            else :
-                echo '<p>No hay eventos disponibles.</p>';
-            endif; 
-            ?>
-
+            <?php
+    }
+    wp_reset_postdata();
+} else {
+    echo '<p>No hay eventos disponibles.</p>';
+}
+?>
+    </div>
     </section>
 
 <?php get_footer(); ?>
