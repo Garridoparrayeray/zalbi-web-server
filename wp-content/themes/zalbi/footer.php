@@ -80,13 +80,12 @@
 
 <?php 
 /* --- LÓGICA DEL BOTÓN DE WHATSAPP --- */
-// 1. Buscamos si hay un número guardado en Ajustes > Generales
-$whatsapp_number = get_option('zalbi_whatsapp_number'); 
+// Usamos get_theme_mod porque ahora está en el Personalizador
+$whatsapp_number = get_theme_mod('zalbi_whatsapp_number'); 
 
-// 2. Solo mostramos el botón si el cliente ha escrito algo en ese campo
 if ( ! empty($whatsapp_number) ) : ?>
 
-    <a href="https://wa.me/<?php echo esc_attr($whatsapp_number); ?>?text=Hola,%20quisiera%20informaci%C3%B3n%20sobre%20vuestros%20servicios" 
+    <a href="https://wa.me/<?php echo esc_attr($whatsapp_number); ?>?text=Hola,%20quisiera%20informaci%C3%B3n" 
        class="whatsapp-btn" 
        target="_blank" 
        rel="noopener noreferrer" 
@@ -97,6 +96,7 @@ if ( ! empty($whatsapp_number) ) : ?>
 <?php endif; ?>
 
 </div><?php wp_footer(); ?>
+
 
 </body>
 <script>

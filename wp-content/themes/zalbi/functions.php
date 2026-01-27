@@ -172,25 +172,31 @@ function zalbi_register_eventos() {
     register_post_type( 'evento', $args );
 }
 add_action( 'init', 'zalbi_register_eventos' );
-/* --- Añadir campo de WhatsApp en Ajustes > Generales --- */
-function zalbi_register_whatsapp_setting() {
-    register_setting('general', 'zalbi_whatsapp_number', 'esc_attr');
-    
-    add_settings_field(
-        'zalbi_whatsapp_number', 
-        '<label for="zalbi_whatsapp_number">' . __('Número de WhatsApp', 'zalbi_whatsapp_number') . '</label>', 
-        'zalbi_whatsapp_number_html', 
-        'general'
-    );
-}
+/* --- Configuración de WhatsApp en el Personalizador --- */
+function zalbi_customize_whatsapp($wp_customize) {
+    // 1. Crear una nueva sección en el menú "Personalizar"
+    $wp_customize->add_section('zalbi_whatsapp_section', array(
+        'title'       => __('Botón WhatsApp', 'zalbi'),
+        'description' => __('Configura aquí el número del botón flotante.', 'zalbi'),
+        'priority'    => 120, // Saldrá abajo del todo
+    ));
 
-function zalbi_whatsapp_number_html() {
-    $value = get_option('zalbi_whatsapp_number', '');
-    echo '<input type="text" id="zalbi_whatsapp_number" name="zalbi_whatsapp_number" value="' . $value . '" class="regular-text" placeholder="Ej: 34600123456" />';
-    echo '<p class="description">Introduce el número con el prefijo del país (34 para España) y sin espacios ni símbolos.</p>';
-}
+    // 2. Registrar la configuración (donde se guarda el dato)
+    $wp_customize->add_setting('zalbi_whatsapp_number', array(
+        'default'           => '',
+        'transport'         => 'refresh', // Refresca la vista previa al escribir
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
 
-add_action('init', 'zalbi_register_whatsapp_setting');
+    // 3. Crear el campo de texto visible (el input)
+    $wp_customize->add_control('zalbi_whatsapp_number', array(
+        'label'       => __('Número de teléfono', 'zalbi'),
+        'section'     => 'zalbi_whatsapp_section',
+        'type'        => 'text',
+        'description' => 'Escribe el número con prefijo (ej: 34658887358). Si lo dejas vacío, el botón desaparece.',
+    ));
+}
+add_action('customize_register', 'zalbi_customize_whatsapp');
 
 /**
  * Implement the Custom Header feature.
