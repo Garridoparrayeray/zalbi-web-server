@@ -149,16 +149,23 @@ function zalbi_register_hinchables() {
 add_action( 'init', 'zalbi_register_hinchables' );
 
 // 2. Registrar la Taxonomía para el Filtro (Grandes, Medianos...)
+
 function zalbi_register_taxonomies() {
     register_taxonomy( 'tipo_hinchable', 'hinchable', array(
-        'labels' => array( 'name' => 'Tipos de Hinchable' ),
-        'hierarchical' => true, 
-        'show_admin_column' => true,
-        'rewrite' => array( 'slug' => 'tipo' ),
+        'labels' => array( 
+            'name'          => 'Tipos de Hinchable',
+            'singular_name' => 'Tipo de Hinchable',
+            'menu_name'     => 'Tipos de Hinchable',
+        ),
+        'public'            => true,  // CRUCIAL: Para que se vea en la web
+        'hierarchical'      => true,  // Para que tenga casillas tipo check
+        'show_ui'           => true,  // Para que salga en el admin
+        'show_admin_column' => true,  // Para ver la columna en la lista
+        'show_in_rest'      => true,  // CRUCIAL: Para que funcione el editor de bloques
+        'rewrite'           => array( 'slug' => 'tipo' ),
     ) );
 }
 add_action( 'init', 'zalbi_register_taxonomies' );
-
 // 3. Registrar el Post Type "Evento"
 function zalbi_register_eventos() {
     $args = array(

@@ -1,31 +1,72 @@
 <?php get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); 
-    // 1. Recuperamos los campos de ACF del producto actual
+    // DETECTAR IDIOMA
+    $es_euskera = (function_exists('pll_current_language') && pll_current_language() == 'eu');
+
+    // 1. Recuperamos campos ACF
     $medidas = get_field('medidas');
     $capacidad = get_field('capacidad');
-    $potencia = get_field('potencia');
-    $certificacion = get_field('certificacion');
     $tag_color = get_field('etiqueta_color');
     
-    // 2. Definimos el Traductor de Colores (Lo definimos aquí para usarlo arriba y abajo)
-    $nombres_visuales = array(
-        //'tag-purple' => 'Pequeño',
-        'tag-orange' => 'Atraccion deportiva',
-        'tag-pink'   => 'Hinchable',
-        'tag-blue'   => 'Acuático',
-        //'tag-lime'   => 'Mecánicos', 
-        'tag-green'  => 'Evento'
-    );
+    // 2. Traductor de Colores
+    if ($es_euskera) {
+        $nombres_visuales = array(
+            'tag-orange' => 'Kirola',
+            'tag-pink'   => 'Puzgarria',
+            'tag-blue'   => 'Uretakoa',
+            'tag-green'  => 'Ekitaldia'
+        );
+        $texto_defecto = 'Puzgarria';
+        
+        // Textos fijos traducidos
+        $txt_inicio = 'Hasiera';
+        $txt_catalogo = 'Katalogoa';
+        $txt_categoria = 'Kategoria';
+        $txt_ficha = 'Fitxa Teknikoa';
+        $txt_medidas = 'Neurriak';
+        $txt_capacidad = 'Edukiera';
+        $txt_interesa = 'Eredu hau interesatzen zaizu?';
+        $txt_btn_presu = 'Eskatu Aurrekontua';
+        $txt_tambien = 'Interesgarria izan daiteke ere';
+        $txt_ver_mas = 'Ikusi gehiago';
+        
+        // URL del catálogo en Euskera (Cámbialo si tu slug es diferente)
+        $url_catalogo = home_url('/eu/katalogoa');
+        $url_contacto = home_url('/eu/kontaktua');
+
+    } else {
+        $nombres_visuales = array(
+            'tag-orange' => 'Atracción deportiva',
+            'tag-pink'   => 'Hinchable',
+            'tag-blue'   => 'Acuático',
+            'tag-green'  => 'Evento'
+        );
+        $texto_defecto = 'Hinchable';
+
+        // Textos fijos en Español
+        $txt_inicio = 'Inicio';
+        $txt_catalogo = 'Catálogo';
+        $txt_categoria = 'Categoría';
+        $txt_ficha = 'Ficha Técnica';
+        $txt_medidas = 'Medidas';
+        $txt_capacidad = 'Capacidad';
+        $txt_interesa = '¿Te interesa este modelo?';
+        $txt_btn_presu = 'Solicitar Presupuesto';
+        $txt_tambien = 'También te puede interesar';
+        $txt_ver_mas = 'Ver más';
+
+        $url_catalogo = home_url('/catalogo');
+        $url_contacto = home_url('/contacto');
+    }
     
-    // Nombre visual del producto actual
-    $nombre_categoria_visual = isset($nombres_visuales[$tag_color]) ? $nombres_visuales[$tag_color] : 'Hinchable';
+    $nombre_categoria_visual = isset($nombres_visuales[$tag_color]) ? $nombres_visuales[$tag_color] : $texto_defecto;
 ?>
 
     <div class="container section-pad">
         <p class="breadcrumbs">
-            <a href="<?php echo home_url(); ?>">Inicio</a> > 
-            <a href="<?php echo home_url('/catalogo'); ?>">Catálogo</a> > 
+            <a href="<?php echo home_url(); ?>"><?php echo $txt_inicio; ?></a> > 
+            <a href="<?php echo $url_catalogo; ?>"><?php echo $txt_catalogo; ?></a> > 
             <span><?php the_title(); ?></span>
         </p>
 
@@ -42,29 +83,29 @@
             <div>
                 <h1 style="color: var(--c-purple); margin-bottom: 10px;"><?php the_title(); ?></h1>
                 
-                <span class="card-tag <?php echo $tag_color; ?>">Categoría: <?php echo $nombre_categoria_visual; ?></span>
+                <span class="card-tag <?php echo $tag_color; ?>"><?php echo $txt_categoria; ?>: <?php echo $nombre_categoria_visual; ?></span>
                 
                 <div class="product-desc" style="margin-top: 20px;">
                     <?php the_content(); ?>
                 </div>
 
                 <div class="spec-box">
-                    <h3>Ficha Técnica</h3>
+                    <h3><?php echo $txt_ficha; ?></h3>
                     
                     <div class="spec-row">
-                        <span><i class="fas fa-ruler-combined"></i> Medidas</span>
+                        <span><i class="fas fa-ruler-combined"></i> <?php echo $txt_medidas; ?></span>
                         <strong><?php echo $medidas; ?></strong>
                     </div>
                     
                     <div class="spec-row">
-                        <span><i class="fas fa-users"></i> Capacidad</span>
+                        <span><i class="fas fa-users"></i> <?php echo $txt_capacidad; ?></span>
                         <strong><?php echo $capacidad; ?></strong>
                     </div>
                 </div>
 
                 <div class="cta-box">
-                    <p style="margin-bottom: 10px; font-weight: bold;">¿Te interesa este modelo?</p>
-                    <a href="<?php echo home_url('/contacto'); ?>" class="btn" style="background: var(--c-lime); color: var(--c-purple); width: 100%;">Solicitar Presupuesto</a>
+                    <p style="margin-bottom: 10px; font-weight: bold;"><?php echo $txt_interesa; ?></p>
+                    <a href="<?php echo $url_contacto; ?>" class="btn" style="background: var(--c-lime); color: var(--c-purple); width: 100%;"><?php echo $txt_btn_presu; ?></a>
                 </div>
             </div>
         </div>
@@ -72,16 +113,15 @@
 
     <section class="section-pad" style="background: white; border-top: 1px solid #eee;">
         <div class="container">
-            <h3 style="margin-bottom: 30px; color: var(--c-purple); text-align: center">También te puede interesar</h3>
+            <h3 style="margin-bottom: 30px; color: var(--c-purple); text-align: center"><?php echo $txt_tambien; ?></h3>
 
             <div class="options" style = "justify-content: center;">
                 <?php
-                // Configuración de la consulta de relacionados
                 $related_args = array(
                     'post_type' => 'hinchable',
-                    'posts_per_page' => 3,             // Mostramos 3
-                    'post__not_in' => array(get_the_ID()), // Excluir el que estamos viendo
-                    'orderby' => 'rand'                // Aleatorios
+                    'posts_per_page' => 3,
+                    'post__not_in' => array(get_the_ID()), 
+                    'orderby' => 'rand'
                 );
                 $related = new WP_Query($related_args);
 
@@ -89,9 +129,9 @@
                     while( $related->have_posts() ) {
                         $related->the_post();
                         
-                        // Recuperamos datos para la tarjeta mini
                         $r_tag_color = get_field('etiqueta_color');
-                        $r_nombre = isset($nombres_visuales[$r_tag_color]) ? $nombres_visuales[$r_tag_color] : 'Hinchable';
+                        // Usamos el mismo array de traducción definido arriba
+                        $r_nombre = isset($nombres_visuales[$r_tag_color]) ? $nombres_visuales[$r_tag_color] : $texto_defecto;
                 ?>
                     
                     <a href="<?php the_permalink(); ?>" class="product-card" style="text-decoration: none; color: inherit; max-width: 300px; margin: 0;">
@@ -101,15 +141,13 @@
                         <div class="card-content" style="padding: 15px;">
                             <span class="card-tag <?php echo $r_tag_color; ?>" style="font-size: 11px;"><?php echo $r_nombre; ?></span>
                             <h4 style="margin: 10px 0; font-size: 18px; color: var(--text-main);"><?php the_title(); ?></h4>
-                            <span class="btn btn-outline" style="font-size: 12px; padding: 5px 15px; width: 100%; display:block; text-align:center;">Ver más</span>
+                            <span class="btn btn-outline" style="font-size: 12px; padding: 5px 15px; width: 100%; display:block; text-align:center;"><?php echo $txt_ver_mas; ?></span>
                         </div>
                     </a>
 
                 <?php
                     }
-                    wp_reset_postdata(); // IMPORTANTE: Reseteamos para no romper el bucle principal
-                } else {
-                    echo '<p style="text-align:center; width:100%;">Echa un vistazo a nuestro catálogo completo.</p>';
+                    wp_reset_postdata(); 
                 }
                 ?>
             </div>
