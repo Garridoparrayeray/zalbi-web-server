@@ -1580,6 +1580,33 @@ img {
     margin-top: auto;
     display: block; /* Para que coja el margen automático */
 }
+/*BOTTON WHATSAPP*/
+/* --- ESTILOS DEL BOTÓN DE WHATSAPP --- */
+.whatsapp-btn {
+    position: fixed;       /* Esto hace que flote y te persiga al hacer scroll */
+    bottom: 30px;          /* Separación desde abajo */
+    right: 30px;           /* Separación desde la derecha */
+    width: 60px;           /* Ancho del círculo */
+    height: 60px;          /* Alto del círculo */
+    background-color: #25D366; /* Verde oficial de WhatsApp */
+    color: #ffffff !important; /* Icono blanco (con !important por si tu tema lo pisa) */
+    border-radius: 50%;    /* Lo hace perfectamente redondo */
+    display: flex;         /* Truco para centrar el icono dentro del círculo */
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;       /* Tamaño del icono */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Sombra para darle profundidad 3D */
+    z-index: 10000;        /* Se asegura de estar ENCIMA de todo (fotos, footer, etc) */
+    text-decoration: none; /* Quita el subrayado típico de los enlaces */
+    transition: all 0.3s ease; /* Suaviza la animación al pasar el ratón */
+}
+
+/* Efecto al pasar el ratón por encima */
+.whatsapp-btn:hover {
+    background-color: #128C7E; /* Se oscurece un poco */
+    transform: scale(1.1);     /* Se hace un 10% más grande */
+    cursor: pointer;
+}
 
 
 /* --- VARIANTES DE COLOR (Bordes) --- */
@@ -1786,6 +1813,14 @@ img {
     .copyright-bar {
         flex-direction: column;
         text-align: center;
+    }
+    /*BOTON WHATSAPP*/
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 28px;
+        bottom: 20px;
+        right: 20px;
     }
 }
 
