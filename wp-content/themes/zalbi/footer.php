@@ -10,18 +10,19 @@
             <div class="footer-grid">
                 
                 <div class="footer-col footer-brand">
-<div class="site-branding" style="display: inline-flex;margin-bottom:8px;">
-            <?php
-            // Si hay logo personalizado en el personalizador, úsalo. Si no, texto.
-            if (has_custom_logo()) {
-                the_custom_logo();
-            } else {
-                ?>
-                <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-                <?php
-            }
-?>
-        </div>                    <p>
+                    <div class="site-branding">
+                        <?php
+                        // Si hay logo personalizado en el personalizador, úsalo. Si no, texto.
+                        if (has_custom_logo()) {
+                            the_custom_logo();
+                        } else {
+                            ?>
+                            <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+                            <?php
+                        }
+                        ?>
+                    </div>
+                    <p>
                         Expertos en ocio, aventura e hinchables. Llevamos la diversión segura a colegios, ayuntamientos y fiestas privadas en todo Euskadi.
                     </p>
                 </div>
@@ -44,20 +45,18 @@
                     </ul>
                 </div>
 
-               <div class="footer-col">
+                <div class="footer-col">
                     <h4 class="footer-title">Información</h4>
                     
                     <?php
-                    // Esto comprueba si hay un menú asignado y lo muestra
                     if ( has_nav_menu( 'menu-legal' ) ) {
                         wp_nav_menu( array(
                             'theme_location' => 'menu-legal',
-                            'menu_class'     => 'footer-links', // Usamos tu clase CSS para que se vea bonito
-                            'container'      => false,          // Quitamos contenedores extra
-                            'depth'          => 1,              // Solo un nivel (sin submenús)
+                            'menu_class'     => 'footer-links',
+                            'container'      => false,
+                            'depth'          => 1,
                         ) );
                     } else {
-                        // Si no has creado el menú todavía, muestra esto temporalmente
                         echo '<ul class="footer-links">';
                         echo '<li><a href="' . home_url('/aviso-legal') . '">Aviso Legal</a></li>';
                         echo '<li><a href="' . home_url('/politica-privacidad') . '">Política de Privacidad</a></li>';
@@ -78,10 +77,30 @@
             
         </div>
     </footer>
+
+<?php 
+/* --- LÓGICA DEL BOTÓN DE WHATSAPP --- */
+// 1. Buscamos si hay un número guardado en Ajustes > Generales
+$whatsapp_number = get_option('zalbi_whatsapp_number'); 
+
+// 2. Solo mostramos el botón si el cliente ha escrito algo en ese campo
+if ( ! empty($whatsapp_number) ) : ?>
+
+    <a href="https://wa.me/<?php echo esc_attr($whatsapp_number); ?>?text=Hola,%20quisiera%20informaci%C3%B3n%20sobre%20vuestros%20servicios" 
+       class="whatsapp-btn" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+<?php endif; ?>
+
 </div><?php wp_footer(); ?>
 
 </body>
 <script>
+// Tu script del menú hamburguesa se mantiene igual
 document.addEventListener('DOMContentLoaded', function() {
     const button = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.main-navigation');

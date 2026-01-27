@@ -172,6 +172,25 @@ function zalbi_register_eventos() {
     register_post_type( 'evento', $args );
 }
 add_action( 'init', 'zalbi_register_eventos' );
+/* --- Añadir campo de WhatsApp en Ajustes > Generales --- */
+function zalbi_register_whatsapp_setting() {
+    register_setting('general', 'zalbi_whatsapp_number', 'esc_attr');
+    
+    add_settings_field(
+        'zalbi_whatsapp_number', 
+        '<label for="zalbi_whatsapp_number">' . __('Número de WhatsApp', 'zalbi_whatsapp_number') . '</label>', 
+        'zalbi_whatsapp_number_html', 
+        'general'
+    );
+}
+
+function zalbi_whatsapp_number_html() {
+    $value = get_option('zalbi_whatsapp_number', '');
+    echo '<input type="text" id="zalbi_whatsapp_number" name="zalbi_whatsapp_number" value="' . $value . '" class="regular-text" placeholder="Ej: 34600123456" />';
+    echo '<p class="description">Introduce el número con el prefijo del país (34 para España) y sin espacios ni símbolos.</p>';
+}
+
+add_action('admin_init', 'zalbi_register_whatsapp_setting');
 
 /**
  * Implement the Custom Header feature.
