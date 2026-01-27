@@ -190,7 +190,7 @@ function zalbi_whatsapp_number_html() {
     echo '<p class="description">Introduce el número con el prefijo del país (34 para España) y sin espacios ni símbolos.</p>';
 }
 
-add_action('admin_init', 'zalbi_register_whatsapp_setting');
+add_action('init', 'zalbi_register_whatsapp_setting');
 
 /**
  * Implement the Custom Header feature.
