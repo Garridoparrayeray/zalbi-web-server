@@ -2,30 +2,37 @@
 /* Template Name: Plantilla Catalogo */
 get_header(); 
 
-// --- 1. CONFIGURACIÓN: ORDEN (SLUGS) ---
-// IMPORTANTE: Aquí NO uses tildes ni ñ. Usa los slugs de WordPress.
-// Si en el admin se llama "Mecánicos", aquí pon 'mecanicos'.
-// Si se llama "Pequeños", aquí pon 'pequenos'.
+// --- 1. DETECTAR IDIOMA ---
+// Verificamos si estamos en Euskera
+$es_euskera = (function_exists('pll_current_language') && pll_current_language() == 'eu');
+
+// --- 2. CONFIGURACIÓN: ORDEN (SLUGS) ---
+// Hemos añadido los slugs en Euskera también para que el orden funcione en ambos idiomas.
 $orden_personalizado = array(
-    'hinchables',   
-    'acuaticos',   
-    'deportivos',    
+    'hinchables', 'puzgarria',  // Español, Euskera
+    'acuaticos', 'uretakoa',    // Español, Euskera
+    'deportivos', 'kirola',     // Español, Euskera
 );
 ?>
 
     <section class="hero-catalog">
         <div class="container">
-            <h1>Nuestras atracciones</h1>
-            <p>Selecciona una categoría para filtrar</p>
+            <h1><?php the_title(); ?></h1>
+            
+            <p>
+                <?php echo $es_euskera ? 'Aukeratu kategoria iragazteko' : 'Selecciona una categoría para filtrar'; ?>
+            </p>
         </div>
     </section>
 
     <div class="container filter-wrapper">
         <div class="filter-box">
-            <button class="btn btn-pink filter-btn" data-filter="todos">Todos</button>
+            <button class="btn btn-pink filter-btn" data-filter="todos">
+                <?php echo $es_euskera ? 'Guztiak' : 'Todos'; ?>
+            </button>
 
             <?php
-            // Obtener categorías reales de la base de datos
+            // Obtener categorías reales de la base de datos (traducidas automáticamente por Polylang)
             $terms = get_terms( array(
                 'taxonomy' => 'tipo_hinchable',
                 'hide_empty' => true, 
@@ -33,7 +40,7 @@ $orden_personalizado = array(
 
             if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
                 
-                // ORDENAR LOS BOTONES SEGÚN TU LISTA PERSONALIZADA
+                // ORDENAR LOS BOTONES
                 usort($terms, function($a, $b) use ($orden_personalizado) {
                     $pos_a = array_search($a->slug, $orden_personalizado);
                     $pos_b = array_search($b->slug, $orden_personalizado);
@@ -65,7 +72,7 @@ $orden_personalizado = array(
                 
                 $posts_array = $query->posts;
 
-                // ORDENAR PRODUCTOS (Para que salgan ordenados al dar a "Todos")
+                // ORDENAR PRODUCTOS
                 usort($posts_array, function($a, $b) use ($orden_personalizado) {
                     $terms_a = get_the_terms($a->ID, 'tipo_hinchable');
                     $slug_a = (!empty($terms_a) && !is_wp_error($terms_a)) ? $terms_a[0]->slug : '';
@@ -84,23 +91,36 @@ $orden_personalizado = array(
                     
                     // Datos del producto
                     $terms = get_the_terms( get_the_ID(), 'tipo_hinchable' );
-                    // Fallback 'sin-categoria' por si se te olvidó marcar el check
                     $filtro_slug = (!empty($terms) && !is_wp_error($terms)) ? $terms[0]->slug : 'sin-categoria';
                     
                     $tag_color = get_field('etiqueta_color');
                     $medidas = get_field('medidas');
                     $capacidad = get_field('capacidad');
 
-                    // --- 2. TRADUCTOR VISUAL (Lo que ve el cliente) ---
-                    $nombres_visuales = array(
-                        //'tag-purple' => 'Pequeño', --> no usado se guarda para posibles actualizaciones
-                        'tag-orange' => 'Deportivo',
-                        'tag-pink'   => 'Hinchable',
-                        'tag-blue'   => 'Acuatico',
-                        //'tag-lime'   => 'Mecánicos', --> igual que purple 
-                        'tag-green'  => 'Evento'
-                    );
-                    $nombre_visual = isset($nombres_visuales[$tag_color]) ? $nombres_visuales[$tag_color] : 'Hinchable';
+                    // --- TRADUCTOR VISUAL ---
+                    if ($es_euskera) {
+                        // Textos en Euskera
+                        $nombres_visuales = array(
+                            'tag-orange' => 'Kirola',
+                            'tag-pink'   => 'Puzgarria',
+                            'tag-blue'   => 'Uretakoa',
+                            'tag-green'  => 'Ekitaldia'
+                        );
+                        $texto_boton = 'Ikusi Ezaugarriak';
+                        $texto_visual_defecto = 'Puzgarria';
+                    } else {
+                        // Textos en Español
+                        $nombres_visuales = array(
+                            'tag-orange' => 'Deportivo',
+                            'tag-pink'   => 'Hinchable',
+                            'tag-blue'   => 'Acuatico',
+                            'tag-green'  => 'Evento'
+                        );
+                        $texto_boton = 'Ver Características';
+                        $texto_visual_defecto = 'Hinchable';
+                    }
+
+                    $nombre_visual = isset($nombres_visuales[$tag_color]) ? $nombres_visuales[$tag_color] : $texto_visual_defecto;
             ?>
 
             <article class="product-card" data-category="<?php echo esc_attr($filtro_slug); ?>"> 
@@ -121,7 +141,9 @@ $orden_personalizado = array(
                         <li><i class="fas fa-users"></i> <?php echo $capacidad; ?></li>
                     </ul>
                     
-                    <a href="<?php the_permalink(); ?>" class="btn btn-outline" style="width: 100%; text-align: center;">Ver Características</a>
+                    <a href="<?php the_permalink(); ?>" class="btn btn-outline" style="width: 100%; text-align: center;">
+                        <?php echo $texto_boton; ?>
+                    </a>
                 </div>
             </article>
 
@@ -129,7 +151,7 @@ $orden_personalizado = array(
                 endforeach; 
                 wp_reset_postdata(); 
             else :
-                echo '<p>No hay hinchables disponibles.</p>';
+                echo '<p>' . ($es_euskera ? 'Ez dago puzgarririk eskuragarri.' : 'No hay hinchables disponibles.') . '</p>';
             endif; 
             ?>
 
@@ -143,12 +165,13 @@ $orden_personalizado = array(
 
         function filterProducts(category) {
             buttons.forEach(btn => {
+                // Comparamos con 'todos' (en minúscula y español, porque es el valor técnico data-filter)
                 if (btn.getAttribute('data-filter') === category) {
                     // BOTÓN ACTIVO
                     btn.classList.remove('btn-outline');
                     btn.classList.add('btn-pink');
                 } else {
-                    // BOTÓN INACTIVO (Limpiamos todos los colores posibles)
+                    // BOTÓN INACTIVO
                     btn.classList.add('btn-outline');
                     btn.classList.remove('btn-pink'); 
                     btn.classList.remove('btn-orange', 'btn-blue', 'btn-green', 'btn-lime', 'btn-purple'); 
@@ -157,7 +180,7 @@ $orden_personalizado = array(
 
             products.forEach(product => {
                 // LÓGICA DE FILTRADO
-                // Comprobamos si es 'todos' O si la categoría coincide
+                // El JS no cambia porque el data-filter sigue siendo el slug (uretakoa, acuatico, etc.)
                 if (category === 'todos' || product.getAttribute('data-category') === category) {
                     product.style.display = 'block'; 
                     // Animación suave
@@ -181,7 +204,7 @@ $orden_personalizado = array(
             });
         });
 
-        // Recuperar filtro desde la URL (si vienes de la home)
+        // Recuperar filtro desde la URL
         const params = new URLSearchParams(window.location.search);
         const urlCategory = params.get('cat');
         if (urlCategory) {
