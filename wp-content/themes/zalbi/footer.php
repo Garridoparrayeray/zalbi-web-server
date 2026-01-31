@@ -2,6 +2,45 @@
 /**
  * The template for displaying the footer
  */
+
+// --- 1. LÓGICA DE IDIOMA ---
+$es_euskera = (function_exists('pll_current_language') && pll_current_language() == 'eu');
+
+if ($es_euskera) {
+    // EUSKERA
+    $txt_desc       = 'Aisialdian, abenturan eta puzgarrietan adituak. Dibertsio segurua eramaten dugu Euskadiko ikastetxe, udal eta festa pribatuetara.';
+    $txt_contacto   = 'Kontaktua';
+    $txt_info       = 'Informazioa';
+    $txt_derechos   = 'Eskubide guztiak erreserbatuta.';
+    $txt_dev        = 'Garridoparrayeray-k garatua'; // "Desarrollado por..."
+    
+    // Textos enlaces manuales (por si falla el menú)
+    $link_aviso     = 'Lege Oharra';
+    $link_priv      = 'Pribatutasun Politika';
+    $link_cookies   = 'Cookie Politika';
+    
+    // Prefijo para URLs manuales en euskera (asumiendo configuración estándar)
+    $url_prefix     = '/eu'; 
+    
+    // Mensaje WhatsApp
+    $wa_msg         = 'Kaixo, informazioa nahi nuke';
+
+} else {
+    // ESPAÑOL
+    $txt_desc       = 'Expertos en ocio, aventura e hinchables. Llevamos la diversión segura a colegios, ayuntamientos y fiestas privadas en todo Euskadi.';
+    $txt_contacto   = 'Contacto';
+    $txt_info       = 'Información';
+    $txt_derechos   = 'Todos los derechos reservados.';
+    $txt_dev        = 'Desarrollado con <span style="color:var(--c-pink);">❤</span> por';
+    
+    $link_aviso     = 'Aviso Legal';
+    $link_priv      = 'Política de Privacidad';
+    $link_cookies   = 'Política de Cookies';
+    
+    $url_prefix     = ''; // Sin prefijo en español
+    
+    $wa_msg         = 'Hola, quisiera información';
+}
 ?>
 
     <footer id="colophon" class="site-footer">
@@ -23,12 +62,12 @@
                         ?>
                     </div>
                     <p>
-                        Expertos en ocio, aventura e hinchables. Llevamos la diversión segura a colegios, ayuntamientos y fiestas privadas en todo Euskadi.
+                        <?php echo $txt_desc; ?>
                     </p>
                 </div>
 
                 <div class="footer-col">
-                    <h4 class="footer-title">Contacto</h4>
+                    <h4 class="footer-title"><?php echo $txt_contacto; ?></h4>
                     <ul class="footer-links contact-list">
                         <li>
                             <i class="fas fa-map-marker-alt"></i> 
@@ -46,9 +85,11 @@
                 </div>
 
                 <div class="footer-col">
-                    <h4 class="footer-title">Información</h4>
+                    <h4 class="footer-title"><?php echo $txt_info; ?></h4>
                     
                     <?php
+                    // IMPORTANTE: Polylang detecta automáticamente qué menú cargar aquí 
+                    // si tienes creados dos menús (uno ES y otro EU) asignados a 'menu-legal'.
                     if ( has_nav_menu( 'menu-legal' ) ) {
                         wp_nav_menu( array(
                             'theme_location' => 'menu-legal',
@@ -57,10 +98,11 @@
                             'depth'          => 1,
                         ) );
                     } else {
+                        // Fallback manual traducido
                         echo '<ul class="footer-links">';
-                        echo '<li><a href="' . home_url('/aviso-legal') . '">Aviso Legal</a></li>';
-                        echo '<li><a href="' . home_url('/politica-privacidad') . '">Política de Privacidad</a></li>';
-                        echo '<li><a href="' . home_url('/politica-cookies') . '">Política de Cookies</a></li>';
+                        echo '<li><a href="' . home_url($url_prefix . '/aviso-legal') . '">' . $link_aviso . '</a></li>';
+                        echo '<li><a href="' . home_url($url_prefix . '/politica-privacidad') . '">' . $link_priv . '</a></li>';
+                        echo '<li><a href="' . home_url($url_prefix . '/politica-cookies') . '">' . $link_cookies . '</a></li>';
                         echo '</ul>';
                     }
                     ?>
@@ -69,9 +111,9 @@
             </div>
 
             <div class="copyright-bar">
-                <p>&copy; <?php echo date('Y'); ?> <strong>ZALBI Aisia eta Abentura</strong>. Todos los derechos reservados.</p>
+                <p>&copy; <?php echo date('Y'); ?> <strong>ZALBI Aisia eta Abentura</strong>. <?php echo $txt_derechos; ?></p>
                 <p class="credits">
-                    Desarrollado con <span style="color:var(--c-pink);">❤</span> por <a href="https://github.com/Garridoparrayeray" target="_blank">Yeray Garrido</a>
+                    <?php echo $txt_dev; ?> <a href="https://github.com/Garridoparrayeray" target="_blank">Yeray Garrido</a>
                 </p>
             </div>
             
@@ -80,16 +122,18 @@
 
 <?php 
 /* --- LÓGICA DEL BOTÓN DE WHATSAPP --- */
-// Usamos get_theme_mod porque ahora está en el Personalizador
 $whatsapp_number = get_theme_mod('zalbi_whatsapp_number'); 
 
-if ( ! empty($whatsapp_number) ) : ?>
+if ( ! empty($whatsapp_number) ) : 
+    // Codificamos el mensaje para que sea válido en la URL (espacios a %20, etc.)
+    $wa_msg_encoded = rawurlencode($wa_msg);
+?>
 
-    <a href="https://wa.me/<?php echo esc_attr($whatsapp_number); ?>?text=Hola,%20quisiera%20informaci%C3%B3n" 
+    <a href="https://wa.me/<?php echo esc_attr($whatsapp_number); ?>?text=<?php echo $wa_msg_encoded; ?>" 
        class="whatsapp-btn" 
        target="_blank" 
        rel="noopener noreferrer" 
-       aria-label="Contactar por WhatsApp">
+       aria-label="WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
