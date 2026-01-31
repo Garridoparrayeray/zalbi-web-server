@@ -145,7 +145,7 @@ if ($es_euskera) {
                 </a>
                 
                 <a href="<?php echo $url_eventos; ?>" class="options-box border-green">
-                  <img src="https://dev-zalbi-aisia-eta-abentura.pantheonsite.io/wp-content/uploads/2026/01/evento-placeholder.jpg" alt="<?php echo $t['cat4_tit']; ?>">
+                  <img src="https://dev-zalbi-aisia-eta-abentura.pantheonsite.io/wp-content/uploads/2026/01/eventos_foto.jpeg" alt="<?php echo $t['cat4_tit']; ?>">
                   
                   <div class="card-body">
                         <h3 class="text-green"><?php echo $t['cat4_tit']; ?></h3>
