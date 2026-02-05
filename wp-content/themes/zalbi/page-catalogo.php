@@ -7,11 +7,15 @@ get_header();
 $es_euskera = (function_exists('pll_current_language') && pll_current_language() == 'eu');
 
 // --- 2. CONFIGURACIÓN: ORDEN (SLUGS) ---
-// Hemos añadido los slugs en Euskera también para que el orden funcione en ambos idiomas.
 $orden_personalizado = array(
-    'hinchables', 'puzgarria',  // Español, Euskera
-    'acuaticos', 'uretakoa',    // Español, Euskera
-    'deportivos', 'kirola',     // Español, Euskera
+    // 1. PRIMERO: Hinchables / Puzgarriak
+    'hinchable', 'hinchables', 'puzgarria', 'puzgarriak', 'puxgarriak', 
+    
+    // 2. SEGUNDO: Acuáticos / Uretakoak
+    'acuatico', 'acuaticos', 'uretakoa', 'uretakoak',
+    
+    // 3. TERCERO: Deportivos / Kirol atrakzioak
+    'atracciones-deportivas', 'deportivos', 'kirola', 'kirol-atrakzioak',
 );
 ?>
 
