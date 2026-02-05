@@ -12,7 +12,7 @@ if ($es_euskera) {
     $txt_contacto   = 'Kontaktua';
     $txt_info       = 'Informazioa';
     $txt_derechos   = 'Eskubide guztiak erreserbatuta.';
-    $txt_dev        = 'Garridoparrayeray-k garatua'; // "Desarrollado por..."
+    $txt_dev        = 'Yeray Garrido <span style="color:var(--c-pink);">❤</span> maitasunez garatuta '; // "Desarrollado por..."
     
     // Textos enlaces manuales (por si falla el menú)
     $link_aviso     = 'Lege Oharra';
