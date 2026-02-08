@@ -1430,11 +1430,14 @@ img {
     display: inline-block;
     margin-bottom: 15px;
 }
+.site-branding{
+      padding-bottom: 10px;
 
+}
 .footer-brand p {
     opacity: 0.8;
     line-height: 1.6;
-    max-width: 300px; /* Para que el texto no se estire demasiado */
+    max-width: 300px; 
 }
 
 /* --- TÍTULOS DE SECCIÓN --- */
