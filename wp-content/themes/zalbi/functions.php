@@ -205,6 +205,59 @@ function zalbi_customize_whatsapp($wp_customize) {
 }
 add_action('customize_register', 'zalbi_customize_whatsapp');
 
+// --- TRADUCCIÓN DE SLUG DE HINCHABLES (hinchable -> puzgarria) ---
+
+// 1. Cambiar el enlace visualmente (para que en la web salga escrito 'puzgarria')
+add_filter('post_type_link', function($post_link, $post) {
+    // Solo actuamos si es un hinchable y el idioma actual es Euskera ('eu')
+    if ($post->post_type === 'hinchable' && function_exists('pll_current_language') && pll_current_language() == 'eu') {
+        return str_replace('/hinchable/', '/puzgarria/', $post_link);
+    }
+    return $post_link;
+}, 10, 2);
+
+// 2. Hacer que el enlace funcione (Regla de reescritura interna)
+add_action('init', function() {
+    // Añadimos una regla para que WP entienda la URL /eu/puzgarria/
+    add_rewrite_rule(
+        '^eu/puzgarria/([^/]+)/?$',
+        'index.php?hinchable=$matches[1]&lang=eu',
+        'top'
+    );
+    // Por si acaso no usas prefijo /eu/ en algún momento (opcional)
+    add_rewrite_rule(
+        '^puzgarria/([^/]+)/?$',
+        'index.php?hinchable=$matches[1]&lang=eu',
+        'top'
+    );
+});
+
+// --- TRADUCCIÓN DE SLUG DE EVENTOS (evento -> ekitaldia) ---
+
+// 1. Cambiar el enlace visualmente (para que en la web salga escrito 'ekitaldia')
+add_filter('post_type_link', function($post_link, $post) {
+    // Solo actuamos si es un 'evento' y el idioma actual es Euskera ('eu')
+    if ($post->post_type === 'evento' && function_exists('pll_current_language') && pll_current_language() == 'eu') {
+        return str_replace('/evento/', '/ekitaldia/', $post_link);
+    }
+    return $post_link;
+}, 10, 2);
+
+// 2. Hacer que el enlace funcione (Regla de reescritura interna)
+add_action('init', function() {
+    // Añadimos una regla para que WP entienda la URL /eu/ekitaldia/
+    add_rewrite_rule(
+        '^eu/ekitaldia/([^/]+)/?$',
+        'index.php?evento=$matches[1]&lang=eu',
+        'top'
+    );
+    // Por si acaso no usas prefijo /eu/ en algún momento (opcional)
+    add_rewrite_rule(
+        '^ekitaldia/([^/]+)/?$',
+        'index.php?evento=$matches[1]&lang=eu',
+        'top'
+    );
+});
 /**
  * Implement the Custom Header feature.
  */
