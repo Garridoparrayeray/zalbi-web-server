@@ -48,8 +48,8 @@ if ($es_euskera) {
     $url_catalogo_base = home_url('/eu/katalogoa');
     $url_eventos       = home_url('/eu/ekitaldiak'); 
     
-    $slug_hinchables   = 'puzgarria';        // A veces es 'puzgarriak', prueba este primero
-    $slug_acuaticos    = 'uretakoa';         // A veces es 'uretakoak'
+    $slug_hinchables   = 'puzgarriak';        // A veces es 'puzgarriak', prueba este primero
+    $slug_acuaticos    = 'uretakoak';         // A veces es 'uretakoak'
     $slug_deportivos   = 'kirol-atrakzioak'; // IMPORTANTE: Antes tenías 'kirola'
 
 } else {
@@ -90,9 +90,9 @@ if ($es_euskera) {
     $url_catalogo_base = home_url('/catalogo');
     $url_eventos       = home_url('/eventos');
     
-    $slug_hinchables   = 'hinchable';              // OJO: En singular suele ser el defecto de WP
-    $slug_acuaticos    = 'acuatico';               // OJO: Sin tilde y singular
-    $slug_deportivos   = 'atracciones-deportivas'; // IMPORTANTE: Antes tenías 'deportivos'
+    $slug_hinchables   = 'hinchables';              
+    $slug_acuaticos    = 'acuaticos';               
+    $slug_deportivos   = 'deportivos'; 
 }
 ?>
 
