@@ -10,13 +10,12 @@ $es_euskera = (function_exists('pll_current_language') && pll_current_language()
 
 // Función auxiliar para crear URLs a prueba de móviles y caché
 function zalbi_url_filtro($url_base, $slug) {
-    // 1. Aseguramos que la URL base termine en '/' para evitar redirecciones del servidor
+    // 1. Aseguramos que la URL base termine en '/' (Esto es el arreglo real)
     $url_base = trailingslashit($url_base);
     
-    // 2. Usamos la función nativa de WordPress para añadir argumentos 
+    // 2. Añadimos el filtro de categoría limpiamente
     return add_query_arg(array(
-        'cat' => $slug,
-        'v'   => '1' // Truco: Cambiamos esto para forzar al móvil a olvidar el caché
+        'cat' => $slug
     ), $url_base);
 }
 
