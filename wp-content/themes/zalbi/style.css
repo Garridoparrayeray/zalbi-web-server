@@ -640,15 +640,39 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Layouts (SOLUCIÓN FINAL FOOTER)
+--------------------------------------------------------------*/
+
+/* 1. OBLIGAR A LA WEB A OCUPAR TODA LA PANTALLA */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 .site {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* La web mide al menos el 100% de la ventana */
 }
 
-/* Esto hace que el contenido central se estire para ocupar el espacio sobrante */
-.site-content {
-    flex: 1;
+/* 2. EL TRUCO MAESTRO: EMPUJAR EL FOOTER ABAJO */
+/* En lugar de estirar el contenido, le decimos al footer 
+   que se aleje todo lo posible hacia abajo */
+.site-footer {
+    margin-top: auto; 
+    margin-bottom: 0 !important; /* Aseguramos que no tenga margen externo */
+    padding-bottom: 20px; /* Tu padding original */
+}
+
+/* 3. QUITAR EL MARGEN DEL ÚLTIMO PÁRRAFO (La franja naranja de tu foto) */
+.site-footer p {
+    margin-bottom: 0 !important;
+}
+
+/* Opcional: Para asegurar que la barra de copyright tampoco dé problemas */
+.copyright-bar p {
+    margin-bottom: 0 !important;
 }
 /*--------------------------------------------------------------
 # Components
