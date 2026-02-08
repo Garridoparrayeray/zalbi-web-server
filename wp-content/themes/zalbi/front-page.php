@@ -6,9 +6,19 @@
 get_header();
 
 // --- 1. LÓGICA DE TRADUCCIÓN ---
-// Detectamos si estamos en Euskera
 $es_euskera = (function_exists('pll_current_language') && pll_current_language() == 'eu');
 
+// Función auxiliar para crear URLs a prueba de móviles y caché
+function zalbi_url_filtro($url_base, $slug) {
+    // 1. Aseguramos que la URL base termine en '/' para evitar redirecciones del servidor
+    $url_base = trailingslashit($url_base);
+    
+    // 2. Usamos la función nativa de WordPress para añadir argumentos (más seguro)
+    return add_query_arg(array(
+        'cat' => $slug,
+        'v'   => '1' // Truco: Cambiamos esto para forzar al móvil a olvidar el caché
+    ), $url_base);
+}
 
 if ($es_euskera) {
     // === TEXTOS EN EUSKERA ===
@@ -43,14 +53,13 @@ if ($es_euskera) {
         'cli2_desc'   => 'Ikasturte amaierako jaiak, aste kulturalak edo edozein elkarte-ekitaldi ospatzen ditugu, profesionaltasuna eta dibertsioa bermatuz.',
     );
 
-    // --- CORRECCIÓN DE SLUGS (Euskera) ---
-    // Deben coincidir exactamente con la URL de la categoría
+    // --- SLUGS EUSKERA (CONFIRMADOS) ---
     $url_catalogo_base = home_url('/eu/katalogoa');
     $url_eventos       = home_url('/eu/ekitaldiak'); 
     
-    $slug_hinchables   = 'puzgarriak';        // A veces es 'puzgarriak', prueba este primero
-    $slug_acuaticos    = 'uretakoak';         // A veces es 'uretakoak'
-    $slug_deportivos   = 'kirol-atrakzioak'; // IMPORTANTE: Antes tenías 'kirola'
+    $slug_hinchables   = 'puzgarriak';       
+    $slug_acuaticos    = 'uretakoak';         
+    $slug_deportivos   = 'kirol-atrakzioak'; 
 
 } else {
     // === TEXTOS EN ESPAÑOL ===
@@ -85,8 +94,7 @@ if ($es_euskera) {
         'cli2_desc'   => 'Celebramos fiestas de fin de curso, semanas culturales o cualquier evento asociativo, garantizando profesionalidad y diversión.',
     );
 
-    // --- CORRECCIÓN DE SLUGS (Español) ---
-    // Deben coincidir exactamente con la URL de la categoría
+    // --- SLUGS ESPAÑOL (CONFIRMADOS) ---
     $url_catalogo_base = home_url('/catalogo');
     $url_eventos       = home_url('/eventos');
     
@@ -119,9 +127,8 @@ if ($es_euskera) {
             
             <div class="options">
                 
-                <a href="<?php echo $url_catalogo_base . '/?cat=' . $slug_hinchables; ?>" class="options-box border-pink">
+                <a href="<?php echo zalbi_url_filtro($url_catalogo_base, $slug_hinchables); ?>" class="options-box border-pink">
                     <img src="https://dev-zalbi-aisia-eta-abentura.pantheonsite.io/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-19-at-10.40.18.jpeg" alt="<?php echo $t['cat1_tit']; ?>">
-                    
                     <div class="card-body">
                         <h3 class="text-pink"><?php echo $t['cat1_tit']; ?></h3>
                         <p><?php echo $t['cat1_desc']; ?></p>
@@ -129,9 +136,8 @@ if ($es_euskera) {
                     </div>
                 </a>
 
-                <a href="<?php echo $url_catalogo_base . '/?cat=' . $slug_acuaticos; ?>" class="options-box border-blue">
+                <a href="<?php echo zalbi_url_filtro($url_catalogo_base, $slug_acuaticos); ?>" class="options-box border-blue">
                     <img src="https://dev-zalbi-aisia-eta-abentura.pantheonsite.io/wp-content/uploads/2026/01/espuma1.jpeg" alt="<?php echo $t['cat2_tit']; ?>"> 
-                    
                     <div class="card-body">
                         <h3 class="text-blue"><?php echo $t['cat2_tit']; ?></h3> 
                         <p><?php echo $t['cat2_desc']; ?></p>
@@ -139,9 +145,8 @@ if ($es_euskera) {
                     </div>
                 </a>
 
-                <a href="<?php echo $url_catalogo_base . '/?cat=' . $slug_deportivos; ?>" class="options-box border-orange">
+                <a href="<?php echo zalbi_url_filtro($url_catalogo_base, $slug_deportivos); ?>" class="options-box border-orange">
                      <img src="https://dev-zalbi-aisia-eta-abentura.pantheonsite.io/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-19-at-14.48.29.jpeg" alt="<?php echo $t['cat3_tit']; ?>">
-                    
                     <div class="card-body">
                         <h3 class="text-orange"><?php echo $t['cat3_tit']; ?></h3>
                         <p><?php echo $t['cat3_desc']; ?></p>
@@ -151,7 +156,6 @@ if ($es_euskera) {
                 
                 <a href="<?php echo $url_eventos; ?>" class="options-box border-green">
                   <img src="https://dev-zalbi-aisia-eta-abentura.pantheonsite.io/wp-content/uploads/2026/01/eventos_foto.jpeg" alt="<?php echo $t['cat4_tit']; ?>">
-                  
                   <div class="card-body">
                         <h3 class="text-green"><?php echo $t['cat4_tit']; ?></h3>
                         <p><?php echo $t['cat4_desc']; ?></p>
