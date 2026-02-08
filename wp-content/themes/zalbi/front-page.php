@@ -13,7 +13,7 @@ function zalbi_url_filtro($url_base, $slug) {
     // 1. Aseguramos que la URL base termine en '/' para evitar redirecciones del servidor
     $url_base = trailingslashit($url_base);
     
-    // 2. Usamos la función nativa de WordPress para añadir argumentos (más seguro)
+    // 2. Usamos la función nativa de WordPress para añadir argumentos 
     return add_query_arg(array(
         'cat' => $slug,
         'v'   => '1' // Truco: Cambiamos esto para forzar al móvil a olvidar el caché
