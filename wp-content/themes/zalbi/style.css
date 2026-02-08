@@ -1401,27 +1401,6 @@ img {
 }
 
 /* --- FOOTER --- */
-/* --- ARREGLO LOGO FOOTER (PC y MÓVIL) --- */
-
-/* 1. Estilos generales para el logo en el Footer */
-.site-footer .site-branding {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* Aplicamos el margen inferior que pedías y desbloqueamos el ancho fijo */
-.site-footer .custom-logo-link {
-    margin-bottom: 25px; /* Espacio entre el logo y el texto */
-    display: inline-block;
-}
-
-/* Hacemos el logo del footer un poco más grande y legible que el del menú */
-.site-footer .custom-logo {
-    width: 120px !important; /* Sobrescribimos los 90px del menú */
-    height: auto !important;
-    max-width: 100%;
-}
 
 
 .site-footer {
