@@ -9,6 +9,7 @@ get_header();
 // Detectamos si estamos en Euskera
 $es_euskera = (function_exists('pll_current_language') && pll_current_language() == 'eu');
 
+
 if ($es_euskera) {
     // === TEXTOS EN EUSKERA ===
     $t = array(
@@ -42,12 +43,14 @@ if ($es_euskera) {
         'cli2_desc'   => 'Ikasturte amaierako jaiak, aste kulturalak edo edozein elkarte-ekitaldi ospatzen ditugu, profesionaltasuna eta dibertsioa bermatuz.',
     );
 
-    // Enlaces y Slugs para Euskera
+    // --- CORRECCIÓN DE SLUGS (Euskera) ---
+    // Deben coincidir exactamente con la URL de la categoría
     $url_catalogo_base = home_url('/eu/katalogoa');
-    $url_eventos       = home_url('/eu/ekitaldiak'); // Asegúrate de que la página se llame así
-    $slug_hinchables   = 'puzgarria'; // Debe coincidir con el slug de la categoría en Euskera
-    $slug_acuaticos    = 'uretakoa';
-    $slug_deportivos   = 'kirola';
+    $url_eventos       = home_url('/eu/ekitaldiak'); 
+    
+    $slug_hinchables   = 'puzgarria';        // A veces es 'puzgarriak', prueba este primero
+    $slug_acuaticos    = 'uretakoa';         // A veces es 'uretakoak'
+    $slug_deportivos   = 'kirol-atrakzioak'; // IMPORTANTE: Antes tenías 'kirola'
 
 } else {
     // === TEXTOS EN ESPAÑOL ===
@@ -82,12 +85,14 @@ if ($es_euskera) {
         'cli2_desc'   => 'Celebramos fiestas de fin de curso, semanas culturales o cualquier evento asociativo, garantizando profesionalidad y diversión.',
     );
 
-    // Enlaces y Slugs para Español
+    // --- CORRECCIÓN DE SLUGS (Español) ---
+    // Deben coincidir exactamente con la URL de la categoría
     $url_catalogo_base = home_url('/catalogo');
     $url_eventos       = home_url('/eventos');
-    $slug_hinchables   = 'hinchables';
-    $slug_acuaticos    = 'acuaticos';
-    $slug_deportivos   = 'deportivos';
+    
+    $slug_hinchables   = 'hinchable';              // OJO: En singular suele ser el defecto de WP
+    $slug_acuaticos    = 'acuatico';               // OJO: Sin tilde y singular
+    $slug_deportivos   = 'atracciones-deportivas'; // IMPORTANTE: Antes tenías 'deportivos'
 }
 ?>
 
