@@ -8,7 +8,7 @@ $es_euskera = (function_exists('pll_current_language') && pll_current_language()
 
 if ($es_euskera) {
     // EUSKERA
-    $txt_desc       = 'Aisialdian, abenturan eta puzgarrietan adituak. Dibertsio segurua eramaten dugu Euskadiko ikastetxe, udal eta festa pribatuetara.';
+    $txt_desc       = 'Aisialdian, abenturan eta puzgarrietan adituak. Dibertsioa eramaten dugu Euskadiko ikastetxe, udal eta festa pribatuetara.';
     $txt_contacto   = 'Kontaktua';
     $txt_info       = 'Informazioa';
     $txt_derechos   = 'Eskubide guztiak erreserbatuta.';

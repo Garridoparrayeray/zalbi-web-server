@@ -34,7 +34,7 @@ if ($es_euskera) {
         
         // Cajas Categorías
         'cat1_tit'    => 'PUZGARRIAK',
-        'cat1_desc'   => 'Tamaina eta adin ezberdinetarako gaztelu puzgarri mota asko ditugu.',
+        'cat1_desc'   => 'Tamaina eta adin ezberdinetarako puzgarri mota asko ditugu.',
         'cat2_tit'    => 'URETAKOAK',
         'cat2_desc'   => 'Beroa egiten duenerako, aparrik onena eta uretako puzgarriak.',
         'cat3_tit'    => 'KIROL ATRAKZIOAK',
