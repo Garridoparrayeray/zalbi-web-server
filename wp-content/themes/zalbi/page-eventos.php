@@ -81,7 +81,7 @@ if ($es_euskera) {
                         <li><i class="fas fa-users" style="color: var(--c-green);"></i> <?php echo $publico; ?></li>
                     </ul>
                     
-                    <a href="<?php the_permalink(); ?>" class="btn btn-outline" style="width: 100%; text-align: center;">
+                    <a href="<?php the_permalink(); ?>" class="btn btn-outline" style="width: 100%; text-align: center; padding-bottom: 5px;">
                         <?php echo $t_ver_mas; ?>
                     </a>
                     
