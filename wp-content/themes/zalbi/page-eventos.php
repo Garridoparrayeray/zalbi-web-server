@@ -7,7 +7,6 @@ $es_euskera = (function_exists('pll_current_language') && pll_current_language()
 
 // --- 2. TRADUCCIONES ---
 if ($es_euskera) {
-    // Euskera
     $t_titulo       = 'Ekitaldiak eta Animazioa';
     $t_subtitulo    = 'Diskomobilak eta tailerrak';
     $t_todos        = 'Guztiak';
@@ -16,7 +15,6 @@ if ($es_euskera) {
     $t_no_hay       = 'Ez dago ekitaldirik eskuragarri.';
     $url_contacto   = home_url('/eu/kontaktua'); // Asegúrate que este es tu slug en euskera
 } else {
-    // Español
     $t_titulo       = 'Eventos y Animación';
     $t_subtitulo    = 'Desde discomóviles y talleres';
     $t_todos        = 'Todos';

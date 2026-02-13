@@ -36,7 +36,7 @@ $orden_personalizado = array(
             </button>
 
             <?php
-            // Obtener categorías reales de la base de datos (traducidas automáticamente por Polylang)
+            // Obtener categorías reales de la base de datos 
             $terms = get_terms( array(
                 'taxonomy' => 'tipo_hinchable',
                 'hide_empty' => true, 
