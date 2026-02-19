@@ -160,7 +160,7 @@ if ($es_euskera) {
                 </a>
                 
                 <a href="<?php echo zalbi_url_filtro($url_catalogo_base, $slug_juegos); ?>" class="options-box border-purple">
-                    <img src="RUTA_A_TU_FOTO_DE_JUEGOS.jpg" alt="<?php echo $t['cat5_tit']; ?>">
+                    <img src="https://dev-zalbi-aisia-eta-abentura.pantheonsite.io/wp-content/uploads/2026/02/juegos_variados_puestos.jpeg" alt="<?php echo $t['cat5_tit']; ?>">
                     <div class="card-body">
                         <h3 class="text-purple"><?php echo $t['cat5_tit']; ?></h3>
                         <p><?php echo $t['cat5_desc']; ?></p>
