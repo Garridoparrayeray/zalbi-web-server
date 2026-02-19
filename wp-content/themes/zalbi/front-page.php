@@ -41,6 +41,8 @@ if ($es_euskera) {
         'cat3_desc'   => 'Kirol-puzgarriak ondo pasatzeko, motrizitatea lantzeko eta barreak bermatzeko.',
         'cat4_tit'    => 'EKITALDIAK',
         'cat4_desc'   => 'Tailerrak eta animazio musikal osoa.',
+        'cat5_tit'    => 'JOKOAK',
+        'cat5_desc'   => 'Haurrek amek eta aitek gozatu genituen jokoekin gozatu dezaten.',
         
         // Sección Presupuesto
         'presu_tit'   => 'Zure espazio eta aurrekontura egokitzen gara, konpromisorik gabe',
@@ -59,6 +61,7 @@ if ($es_euskera) {
     $slug_hinchables   = 'puzgarriak';       
     $slug_acuaticos    = 'uretakoak';         
     $slug_deportivos   = 'kirol-atrakzioak'; 
+    $slug_juegos       = 'jokoak';
 
 } else {
     // === TEXTOS EN ESPAÑOL ===
@@ -82,6 +85,8 @@ if ($es_euskera) {
         'cat3_desc'   => 'Hinchables deportivos para pasar un buen rato, trabajar la motricidad y risas garantizadas.',
         'cat4_tit'    => 'EVENTOS',
         'cat4_desc'   => 'Talleres y animación musical completa.',
+        'cat5_tit'    => 'JUEGOS',
+        'cat5_desc'   => 'Que los niños disfruten de los juegos que disfrutamos las amas y aitas.',
         
         // Sección Presupuesto
         'presu_tit'   => 'Nos adaptamos a tu espacio y presupuesto, os damos un presupuesto sin ningún compromiso',
@@ -100,10 +105,11 @@ if ($es_euskera) {
     $slug_hinchables   = 'hinchables';              
     $slug_acuaticos    = 'acuaticos';               
     $slug_deportivos   = 'deportivos'; 
+    $slug_juegos       = 'juegos';
 }
 ?>
 
-  <section class="hero-home">
+    <section class="hero-home">
       <div class="container">
         <h1><?php echo $t['hero_titulo']; ?></h1>
         <p><?php echo $t['hero_desc']; ?></p>
@@ -120,7 +126,7 @@ if ($es_euskera) {
       </div>
     </section>
 
-   <section class="section-pad bg-light"> 
+    <section class="section-pad bg-light"> 
         <div class="container">
             <h2 class="text-center section-title"><?php echo $t['buscando_tit']; ?></h2>
             
@@ -153,6 +159,15 @@ if ($es_euskera) {
                     </div>
                 </a>
                 
+                <a href="<?php echo zalbi_url_filtro($url_catalogo_base, $slug_juegos); ?>" class="options-box border-purple">
+                    <img src="RUTA_A_TU_FOTO_DE_JUEGOS.jpg" alt="<?php echo $t['cat5_tit']; ?>">
+                    <div class="card-body">
+                        <h3 class="text-purple"><?php echo $t['cat5_tit']; ?></h3>
+                        <p><?php echo $t['cat5_desc']; ?></p>
+                        <span class="link-more text-purple"><?php echo $t['ver_mas']; ?></span>
+                    </div>
+                </a>
+
                 <a href="<?php echo $url_eventos; ?>" class="options-box border-green">
                   <img src="https://dev-zalbi-aisia-eta-abentura.pantheonsite.io/wp-content/uploads/2026/01/eventos_foto.jpeg" alt="<?php echo $t['cat4_tit']; ?>">
                   <div class="card-body">
@@ -161,6 +176,7 @@ if ($es_euskera) {
                         <span class="link-more text-green"><?php echo $t['ver_mas']; ?></span>
                     </div>
                 </a>
+
             </div>
         </div>
     </section>
