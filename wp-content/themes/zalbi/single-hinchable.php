@@ -4,10 +4,10 @@
     // DETECTAR IDIOMA
     $es_euskera = (function_exists('pll_current_language') && pll_current_language() == 'eu');
 
-    // 1. Recuperamos campos ACF
-    $medidas = get_field('medidas');
-    $capacidad = get_field('capacidad');
-    $tag_color = get_field('etiqueta_color');
+    // 1. Recuperamos campos ACF (usando get_the_ID() por seguridad)
+    $medidas = get_field('medidas', get_the_ID());
+    $capacidad = get_field('capacidad', get_the_ID());
+    $tag_color = get_field('etiqueta_color', get_the_ID());
     
     // 2. Traductor de Colores
     if ($es_euskera) {
@@ -16,11 +16,10 @@
             'tag-pink'   => 'Puzgarria',
             'tag-blue'   => 'Uretakoa',
             'tag-green'  => 'Ekitaldia',
-            'tag-purple' => 'Jokoa' // NUEVO EN EUSKERA
+            'tag-purple' => 'Jokoa'
         );
         $texto_defecto = 'Puzgarria';
         
-        // Textos fijos traducidos
         $txt_inicio = 'Hasiera';
         $txt_catalogo = 'Katalogoa';
         $txt_categoria = 'Kategoria';
@@ -32,7 +31,6 @@
         $txt_tambien = 'Interesgarria izan daiteke ere';
         $txt_ver_mas = 'Ikusi gehiago';
         
-        // URL del catálogo en Euskera (Cámbialo si tu slug es diferente)
         $url_catalogo = home_url('/eu/katalogoa');
         $url_contacto = home_url('/eu/kontaktua');
 
@@ -42,11 +40,10 @@
             'tag-pink'   => 'Hinchable',
             'tag-blue'   => 'Acuático',
             'tag-green'  => 'Evento',
-            'tag-purple' => 'Juego' // NUEVO EN ESPAÑOL
+            'tag-purple' => 'Juego'
         );
         $texto_defecto = 'Hinchable';
 
-        // Textos fijos en Español
         $txt_inicio = 'Inicio';
         $txt_catalogo = 'Catálogo';
         $txt_categoria = 'Categoría';
@@ -65,6 +62,35 @@
     $nombre_categoria_visual = isset($nombres_visuales[$tag_color]) ? $nombres_visuales[$tag_color] : $texto_defecto;
 ?>
 
+    <style>
+        .product-desc {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        /* Los textos y listas ocupan el 100% del ancho */
+        .product-desc > *:not(figure):not(img):not(.wp-block-gallery) {
+            flex: 1 1 100%;
+            margin-bottom: 5px;
+        }
+        /* Las imágenes sueltas se auto-organizan en 2 columnas */
+        .product-desc figure.wp-block-image, .product-desc p > img {
+            flex: 1 1 calc(50% - 10px);
+            margin: 0;
+        }
+        /* Todas las fotos a la misma altura, sin deformarse y con bordes redondeados */
+        .product-desc figure img, .product-desc img {
+            width: 100%;
+            height: 180px; 
+            object-fit: cover; 
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .product-desc .wp-block-gallery {
+            flex: 1 1 100%;
+        }
+    </style>
+
     <div class="container section-pad">
         <p class="breadcrumbs">
             <a href="<?php echo home_url(); ?>"><?php echo $txt_inicio; ?></a> > 
@@ -76,9 +102,9 @@
             
             <div>
                 <?php if ( has_post_thumbnail() ) { 
-                    the_post_thumbnail('large', array('class' => 'gallery-main')); 
+                    the_post_thumbnail('large', array('class' => 'gallery-main', 'style' => 'border-radius:10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);')); 
                 } else { ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo.webp" class="gallery-main" style="background:#eee;">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo.webp" class="gallery-main" style="background:#eee; border-radius:10px;">
                 <?php } ?>
             </div>
 
@@ -91,7 +117,7 @@
                     <?php the_content(); ?>
                 </div>
 
-                <div class="spec-box">
+                <div class="spec-box" style="margin-top: 25px;">
                     <h3><?php echo $txt_ficha; ?></h3>
                     
                     <div class="spec-row">
@@ -131,8 +157,7 @@
                     while( $related->have_posts() ) {
                         $related->the_post();
                         
-                        $r_tag_color = get_field('etiqueta_color');
-                        // Usamos el mismo array de traducción definido arriba
+                        $r_tag_color = get_field('etiqueta_color', get_the_ID());
                         $r_nombre = isset($nombres_visuales[$r_tag_color]) ? $nombres_visuales[$r_tag_color] : $texto_defecto;
                 ?>
                     
