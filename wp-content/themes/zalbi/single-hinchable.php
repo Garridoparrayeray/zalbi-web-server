@@ -15,7 +15,8 @@
             'tag-orange' => 'Kirola',
             'tag-pink'   => 'Puzgarria',
             'tag-blue'   => 'Uretakoa',
-            'tag-green'  => 'Ekitaldia'
+            'tag-green'  => 'Ekitaldia',
+            'tag-purple' => 'Jokoa' // NUEVO EN EUSKERA
         );
         $texto_defecto = 'Puzgarria';
         
@@ -40,7 +41,8 @@
             'tag-orange' => 'Atracción deportiva',
             'tag-pink'   => 'Hinchable',
             'tag-blue'   => 'Acuático',
-            'tag-green'  => 'Evento'
+            'tag-green'  => 'Evento',
+            'tag-purple' => 'Juego' // NUEVO EN ESPAÑOL
         );
         $texto_defecto = 'Hinchable';
 

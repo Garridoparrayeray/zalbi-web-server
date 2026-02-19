@@ -16,6 +16,9 @@ $orden_personalizado = array(
     
     // 3. TERCERO: Deportivos / Kirol atrakzioak
     'atracciones-deportivas', 'deportivos', 'kirola', 'kirol-atrakzioak',
+
+    // 4. CUARTO: Juegos / Jokoak (NUEVO)
+    'juegos', 'juego', 'jokoak', 'jokoa'
 );
 ?>
 

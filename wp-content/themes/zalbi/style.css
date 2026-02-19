@@ -1677,6 +1677,10 @@ img {
 .border-lime { border-color: var(--c-lime); }
 .options-box:hover.border-lime { border-color: var(--c-lime); }
 
+/*Morado*/
+.border-purple{ border-color: var(--c-purple);}
+.options-box:hover.border-purple { border-color: var(--c-purple); }
+
 /* --- RESPONSIVE (MÓVIL) --- */
 @media (max-width: 768px) {
 /* 1. ANIMACIÓN DEL BOTÓN HAMBURGUESA */
