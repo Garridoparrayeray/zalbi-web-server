@@ -100,7 +100,7 @@ $orden_personalizado = array(
                     $terms = get_the_terms( get_the_ID(), 'tipo_hinchable' );
                     $filtro_slug = (!empty($terms) && !is_wp_error($terms)) ? $terms[0]->slug : 'sin-categoria';
                     
-                    $$tag_color = get_field('etiqueta_color', get_the_ID());
+                    $tag_color = get_field('etiqueta_color', get_the_ID());
                     $medidas = get_field('medidas', get_the_ID());
                     $capacidad = get_field('capacidad', get_the_ID());
                     // --- TRADUCTOR VISUAL ---
