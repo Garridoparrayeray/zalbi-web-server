@@ -100,10 +100,9 @@ $orden_personalizado = array(
                     $terms = get_the_terms( get_the_ID(), 'tipo_hinchable' );
                     $filtro_slug = (!empty($terms) && !is_wp_error($terms)) ? $terms[0]->slug : 'sin-categoria';
                     
-                    $tag_color = get_field('etiqueta_color');
-                    $medidas = get_field('medidas');
-                    $capacidad = get_field('capacidad');
-
+                    $$tag_color = get_field('etiqueta_color', get_the_ID());
+                    $medidas = get_field('medidas', get_the_ID());
+                    $capacidad = get_field('capacidad', get_the_ID());
                     // --- TRADUCTOR VISUAL ---
                     if ($es_euskera) {
                         // Textos en Euskera
@@ -111,7 +110,8 @@ $orden_personalizado = array(
                             'tag-orange' => 'Kirola',
                             'tag-pink'   => 'Puzgarria',
                             'tag-blue'   => 'Uretakoa',
-                            'tag-green'  => 'Ekitaldia'
+                            'tag-green'  => 'Ekitaldia',
+                            'tag-purple' => 'Jokoa' // NUEVO
                         );
                         $texto_boton = 'Ikusi Ezaugarriak';
                         $texto_visual_defecto = 'Puzgarria';
@@ -121,7 +121,8 @@ $orden_personalizado = array(
                             'tag-orange' => 'Deportivo',
                             'tag-pink'   => 'Hinchable',
                             'tag-blue'   => 'Acuatico',
-                            'tag-green'  => 'Evento'
+                            'tag-green'  => 'Evento',
+                            'tag-purple' => 'Juego' // NUEVO
                         );
                         $texto_boton = 'Ver Características';
                         $texto_visual_defecto = 'Hinchable';
